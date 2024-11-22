@@ -2,7 +2,7 @@ import random
 
 numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "{", "}", "[", "]", "|", ":", "<", ">", "/", "?"]
+symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "-", "_", "+", "=", "|", ":", "/", "?"]
 
 print("Welcome to the password wizard!\n\nFrom this application you'll be able to generate a random password, or you'll have the option to use your own 'base' password that we can mix with some classic security mixers to make a very strong password.\n")
 
