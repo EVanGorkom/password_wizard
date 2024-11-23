@@ -28,12 +28,20 @@ def simple_password() -> str:
     symbol2 = random.choice(symbols)
     number1 = random.choice(numbers)
     number2 = random.choice(numbers)
-    final_password = f"{word1}{symbol1}{number1}{number2}{word2}{symbol2}"
+    word1_spliced = char_splice(word1, symbol1, number1)
+    
+    final_password = f"{word1_spliced}{number2}{word2}{symbol2}"
     print(f"Your new random password is: {final_password}")
 
 def strong_password(base_password: str) -> str:
     print("Test")
 
+def char_splice(word: str, symbol: str, number: str) -> str:
+    position = random.randint(1, len(word) - 1)
+    word = word[:position] + symbol + word[position:]
+    position = random.randint(1, len(word) - 1)
+    new_word = word[:position] + number + word[position:]
+    return new_word
 
 password_type = None
 while password_type is None:
