@@ -3,8 +3,21 @@ import random
 numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "-", "_", "+", "=", "|", ":", "/", "?"]
+letters_conversion_hash = {
+    "a": ["@", "4"],
+    "b": ["6", "8"],
+    "e": ["3"],
+    "i": ["!", "1"],
+    "l": ["7"],
+    "o": ["0"],
+    "p": ["9"],
+    "s": ["$", "5"],
+    "t": ["+"],
+    "v": ["^"],
+    "x": ["%"],
+    "z": ["2"]
+}
 
-print("Welcome to the password wizard!\n\nFrom this application you'll be able to generate a random password, or you'll have the option to use your own 'base' password that we can mix with some classic security mixers to make a very strong password.\n")
 
 def get_random_word() -> str:
     try:
@@ -34,7 +47,21 @@ def simple_password() -> str:
     print(f"Your new random password is: {final_password}")
 
 def strong_password(base_password: str) -> str:
-    print("Test")
+    encrypted_base = ""
+
+    shift = random.randint(1, 25)
+    base_as_hash = []
+
+    for letter in base_password:
+        letter_index_value = letters.index(letter)
+        base_as_hash.append(letter_index_value)
+        print(letter_index_value)
+
+    for letter_index in base_as_hash:
+        shifted_index = letter_index + shift
+        if shifted_index > 26:
+
+
 
 def char_splice(word: str, symbol: str, number: str) -> str:
     position = random.randint(1, len(word) - 1)
@@ -42,6 +69,10 @@ def char_splice(word: str, symbol: str, number: str) -> str:
     position = random.randint(1, len(word) - 1)
     new_word = word[:position] + number + word[position:]
     return new_word
+
+
+# Main Logic
+print("Welcome to the password wizard!\n\nFrom this application you'll be able to generate a random password, or you'll have the option to use your own 'base' password that we can mix with some classic security mixers to make a very strong password.\n")
 
 password_type = None
 while password_type is None:
