@@ -43,25 +43,37 @@ def simple_password() -> str:
     number2 = random.choice(numbers)
     word1_spliced = char_splice(word1, symbol1, number1)
     
-    final_password = f"{word1_spliced}{number2}{word2}{symbol2}"
+    update_password = f"{word1_spliced}{number2}{word2}{symbol2}"
+    final_password = random_upcase(update_password)
     print(f"Your new random password is: {final_password}")
 
 def strong_password(base_password: str) -> str:
-    encrypted_base = ""
+    shifted_password = caesarian_shift(base_password)
+    random_upcase(shifted_password)
 
+    symbol1 = random.choice(symbols)
+    number1 = random.choice(numbers)
+    spliced_password = char_splice(shifted_password, symbol1, number1)
+    print(f"Your base password has been transformed.\nYour new password is: {spliced_password}")
+
+def caesarian_shift(base_word: str) -> str:
+    base_word = base_word.lower()
+    encrypted_word = ""
     shift = random.randint(1, 25)
-    base_as_hash = []
+    for letter in base_word:
+        if letter in letters:
+            letter_index = letters.index(letter)
+            shifted_index = (letter_index + shift) % 26
+            encrypted_word += letters[shifted_index]
+        else:
+            encrypted_word += letter
+    return encrypted_word
 
-    for letter in base_password:
-        letter_index_value = letters.index(letter)
-        base_as_hash.append(letter_index_value)
-        print(letter_index_value)
-
-    for letter_index in base_as_hash:
-        shifted_index = letter_index + shift
-        if shifted_index > 26:
-
-
+def random_upcase(password: str) -> str:
+    password_chars = list(password)
+    random_index = random.randint(0, len(password_chars) - 1)
+    password_chars[random_index] = password_chars[random_index].upper()
+    return ''.join(password_chars)
 
 def char_splice(word: str, symbol: str, number: str) -> str:
     position = random.randint(1, len(word) - 1)
@@ -85,7 +97,7 @@ while password_type is None:
     elif password_type == "2":
         base_password = ""
         while len(base_password) < 6:
-            base_password = input("What do you want your password's base word or phrase to be?\n").lower().strip()
+            base_password = input("\nThis option will utilize a cipher to scramble your base word into something hackers are extremely unlikely to guess.\nWhat do you want your password's base word or phrase to be?\n").lower().strip()
             if len(base_password) < 6:
                 print("Please choose a longer 'base' password or consider using a phrase.\nA minimum of 6 characters is recommended for enhanced security.")
         strong_password(base_password)
