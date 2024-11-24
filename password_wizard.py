@@ -8,13 +8,11 @@ letters_conversion_hash = {
     "b": ["6", "8"],
     "e": ["3"],
     "i": ["!", "1"],
-    "l": ["7"],
+    "l": ["|", "7"],
     "o": ["0"],
     "p": ["9"],
     "s": ["$", "5"],
     "t": ["+"],
-    "v": ["^"],
-    "x": ["%"],
     "z": ["2"]
 }
 
@@ -37,30 +35,41 @@ def get_random_word() -> str:
 def simple_password() -> str:
     word1 = get_random_word()
     word2 = get_random_word()
-    symbol1 = random.choice(symbols)
-    symbol2 = random.choice(symbols)
-    number1 = random.choice(numbers)
-    number2 = random.choice(numbers)
-    word1_spliced = char_splice(word1, symbol1, number1)
-    
-    update_password = f"{word1_spliced}{number2}{word2}{symbol2}"
-    final_password = random_upcase(update_password)
+    altered_word1 = char_replacement(word1)
+    altered_word2 = char_replacement(word2)
+    final_word1 = random_upcase(altered_word1)
+    final_word2 = random_upcase(altered_word2)
+    final_password = f"{final_word1}{final_word2}"
     print(f"Your new random password is: {final_password}")
 
 def strong_password(base_password: str) -> str:
     shifted_password = caesarian_shift(base_password)
-    random_upcase(shifted_password)
+    upcased_password = random_upcase(shifted_password)
 
     symbol1 = random.choice(symbols)
     number1 = random.choice(numbers)
-    spliced_password = char_splice(shifted_password, symbol1, number1)
+    spliced_password = char_splice(upcased_password, symbol1, number1)
     print(f"Your base password has been transformed.\nYour new password is: {spliced_password}")
 
-def caesarian_shift(base_word: str) -> str:
-    base_word = base_word.lower()
+
+# Helper methods
+def char_replacement(base_password: str) -> str:
+    password_chars = list(base_password)
+    replacement_count = 0
+
+    while replacement_count < 2:
+        index = random.randint(0, len(password_chars) - 1)
+        char = password_chars[index]
+        if char in letters_conversion_hash:
+            password_chars[index] = random.choice(letters_conversion_hash[char])
+            replacement_count += 1
+    return ''.join(password_chars)
+
+def caesarian_shift(base_password: str) -> str:
+    base_password = base_password.lower()
     encrypted_word = ""
     shift = random.randint(1, 25)
-    for letter in base_word:
+    for letter in base_password:
         if letter in letters:
             letter_index = letters.index(letter)
             shifted_index = (letter_index + shift) % 26
@@ -69,18 +78,18 @@ def caesarian_shift(base_word: str) -> str:
             encrypted_word += letter
     return encrypted_word
 
-def random_upcase(password: str) -> str:
-    password_chars = list(password)
+def random_upcase(base_password: str) -> str:
+    password_chars = list(base_password)
     random_index = random.randint(0, len(password_chars) - 1)
     password_chars[random_index] = password_chars[random_index].upper()
     return ''.join(password_chars)
 
-def char_splice(word: str, symbol: str, number: str) -> str:
-    position = random.randint(1, len(word) - 1)
-    word = word[:position] + symbol + word[position:]
-    position = random.randint(1, len(word) - 1)
-    new_word = word[:position] + number + word[position:]
-    return new_word
+def char_splice(base_password: str, symbol: str, number: str) -> str:
+    position = random.randint(1, len(base_password) - 1)
+    base_password = base_password[:position] + symbol + base_password[position:]
+    position = random.randint(1, len(base_password) - 1)
+    new_password = base_password[:position] + number + base_password[position:]
+    return new_password
 
 
 # Main Logic
