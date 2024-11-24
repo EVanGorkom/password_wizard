@@ -105,10 +105,10 @@ while password_type is None:
 
     elif password_type == "2":
         base_password = ""
-        while len(base_password) < 6:
+        while len(base_password) < 7:
             base_password = input("\nThis option will utilize a cipher to scramble your base word into something hackers are extremely unlikely to guess.\nWhat do you want your password's base word or phrase to be?\n").lower().strip()
-            if len(base_password) < 6:
-                print("Please choose a longer 'base' password or consider using a phrase.\nA minimum of 6 characters is recommended for enhanced security.")
+            if len(base_password) < 7:
+                print("Please choose a longer 'base' password or consider using a phrase.\nA minimum of 7 characters is required for enhanced security.")
         strong_password(base_password)
         break
 
