@@ -51,6 +51,28 @@ def strong_password(base_password: str) -> str:
     spliced_password = char_splice(upcased_password, symbol1, number1)
     print(f"Your base password has been transformed.\nYour new password is: {spliced_password}")
 
+def random_password() -> str:
+    i = 0
+    j = 0
+    base_password = ""
+    while i < 10:
+        base_password += random.choice(letters)
+        i += 1
+
+    while j < 3:
+        base_password = char_splice(base_password, random.choice(symbols), random.choice(numbers))
+        j += 1
+
+    k = random.randint(2, 5)
+    l = 0
+
+    while l != k:
+        base_password = random_upcase(base_password)
+        l += 1
+
+
+    print(base_password)
+
 
 # Helper methods
 def char_replacement(base_password: str) -> str:
@@ -97,7 +119,7 @@ print("Welcome to the password wizard!\n\nFrom this application you'll be able t
 
 password_type = None
 while password_type is None:
-    password_type = input("What would you like to do?\n1) Create a random password.\n2) Create a password from a 'base' value.\n")
+    password_type = input("What would you like to do?\n1) Create a simpler random password.\n2) Create a password from a 'base' value.\n3) Create a very strong random password.\n")
 
     if password_type == "1":
         simple_password()
@@ -110,6 +132,10 @@ while password_type is None:
             if len(base_password) < 7:
                 print("Please choose a longer 'base' password or consider using a phrase.\nA minimum of 7 characters is required for enhanced security.")
         strong_password(base_password)
+        break
+
+    elif password_type == "3":
+        random_password()
         break
 
     else:
