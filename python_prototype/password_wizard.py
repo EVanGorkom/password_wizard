@@ -70,7 +70,6 @@ def random_password() -> str:
         base_password = random_upcase(base_password)
         l += 1
 
-
     print(base_password)
 
 
