@@ -47,9 +47,12 @@ def strong_password(base_password: str) -> str:
     upcased_password = random_upcase(shifted_password)
 
     symbol1 = random.choice(symbols)
+    symbol2 = random.choice(symbols)
     number1 = random.choice(numbers)
-    spliced_password = char_splice(upcased_password, symbol1, number1)
-    print(f"Your base password has been transformed.\nYour new password is: {spliced_password}")
+    number2 = random.choice(numbers)
+    spliced_password1 = char_splice(upcased_password, symbol1, number1)
+    spliced_password2 = char_splice(spliced_password1, symbol2, number2)
+    print(f"Your base password has been transformed.\nYour new password is: {spliced_password2}")
 
 def random_password() -> str:
     i = 0
