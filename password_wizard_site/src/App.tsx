@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import wizardLogo from './assets/password_wizard_logo_2.png';
 import './App.css';
-import Intro from './components/Intro/intro';
-import PasswordOutput from './components/PasswordOutput/passwordOutput';
+import { Intro } from './components/Intro/intro.tsx'
+import { PasswordOutput } from './components/PasswordOutput/passwordOutput';
 
 function App() {
   const [count, setCount] = useState(0)
