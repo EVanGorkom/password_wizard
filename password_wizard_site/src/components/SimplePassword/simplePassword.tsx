@@ -1,11 +1,9 @@
 import { useState, useEffect } from "react";
 
-// Define the SimplePassword component
 function SimplePassword() {
-    // State to hold the generated password
     const [password, setPassword] = useState("");
 
-    // Mocked word bank (this can be replaced by fetching from an API or local file)
+    // Mocked word bank (can be replaced by an API or local file)
     const wordBank = [
         "password",
         "example",
@@ -15,77 +13,58 @@ function SimplePassword() {
         "user",
     ];
 
-    // Helper functions
+    const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+    const symbols = ["!","@","#","$","%","^","&","*","-","_","+","=","|",":","/","?"];
+
     function getRandomWord() {
         const randomIndex = Math.floor(Math.random() * wordBank.length);
         return wordBank[randomIndex];
     }
 
-    function charReplacement(basePassword: string) {
-        const lettersConversionHash: { [key: string]: string[] } = {
-            a: ["@", "4"],
-            b: ["6", "8"],
-            e: ["3"],
-            i: ["!", "1"],
-            l: ["|", "7"],
-            o: ["0"],
-            p: ["9"],
-            s: ["$", "5"],
-            t: ["+"],
-            z: ["2"],
-        };
-
-        const passwordChars = basePassword.split("");
-        let replacementCount = 0;
-
-        while (replacementCount < 2) {
-            const index = Math.floor(Math.random() * passwordChars.length);
-            const char = passwordChars[index];
-
-            if (lettersConversionHash[char]) {
-                const replacements = lettersConversionHash[char];
-                passwordChars[index] =
-                replacements[Math.floor(Math.random() * replacements.length)];
-                replacementCount++;
-            }
-        }
-
-        return passwordChars.join("");
+    function getRandomNumber() {
+        return numbers[Math.floor(Math.random() * numbers.length)];
     }
 
-    function randomUpcase(basePassword: string) {
-        const passwordChars = basePassword.split("");
-        const randomIndex = Math.floor(Math.random() * passwordChars.length);
-        passwordChars[randomIndex] = passwordChars[randomIndex].toUpperCase();
-        return passwordChars.join("");
+    function getRandomSymbol() {
+        return symbols[Math.floor(Math.random() * symbols.length)];
     }
 
-    // Main function to generate the simple password
+    function randomUpcase(word: string) {
+        const chars = word.split("");
+        const randomIndex = Math.floor(Math.random() * chars.length);
+        chars[randomIndex] = chars[randomIndex].toUpperCase();
+        return chars.join("");
+    }
+
+    function addSymbolOrNumber(word: string) {
+        const shouldAddToStart = Math.random() < 0.5; // 50% chance
+        const isNumber = Math.random() < 0.5; // 50% chance for number or symbol
+        const char = isNumber ? getRandomNumber() : getRandomSymbol();
+
+        return shouldAddToStart ? `${char}${word}` : `${word}${char}`;
+    }
+
     function generateSimplePassword() {
-        const word1 = getRandomWord();
-        const word2 = getRandomWord();
+        const word1 = addSymbolOrNumber(randomUpcase(getRandomWord()));
+        const word2 = addSymbolOrNumber(randomUpcase(getRandomWord()));
 
-        const alteredWord1 = randomUpcase(charReplacement(word1));
-        const alteredWord2 = randomUpcase(charReplacement(word2));
-
-        const finalPassword = `${alteredWord1}${alteredWord2}`;
+        const finalPassword = `${word1}${word2}`;
         setPassword(finalPassword);
     }
 
-    // Generate a password on component mount
     useEffect(() => {
         generateSimplePassword();
-    });
+    }, []); 
 
     return (
         <div className="simple-password">
-            <h2>Your Simple Password</h2>
-            <p className="password-output">{password}</p>
+        <h2>Your Simple Password</h2>
+        <p className="password-output">{password}</p>
         <button
             onClick={generateSimplePassword}
             className="password-generate-button"
         >
-            Generate New Password
+            Generate
         </button>
         </div>
     );
