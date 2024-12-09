@@ -1,32 +1,28 @@
-import React from "react";
-
 interface PasswordOptionsProps {
-    setPasswordType: (type: string) => void;
+    setPasswordType: React.Dispatch<React.SetStateAction<"simple" | "cipher">>;
 }
 
-const PasswordOptions: React.FC<PasswordOptionsProps> = ({
-    setPasswordType,
-    }) => {
-    const handleOptionChange = (type: string) => {
+function PasswordOptions({ setPasswordType }: PasswordOptionsProps) {
+    const handleOptionChange = (type: "simple" | "cipher") => {
         setPasswordType(type);
     };
 
     return (
         <div className="password-options">
-            <button
-                onClick={() => handleOptionChange("simple")}
-                className="option-button"
-            >
-                Create Simple Password
-            </button>
-            <button
-                onClick={() => handleOptionChange("jumble")}
-                className="option-button"
-            >
-                Jumble My Password
-            </button>
+        <button
+            onClick={() => handleOptionChange("simple")}
+            className="option-button"
+        >
+            Create Simple Password
+        </button>
+        <button
+            onClick={() => handleOptionChange("cipher")}
+            className="option-button"
+        >
+            Jumble My Password
+        </button>
         </div>
     );
-};
+}
 
-export default PasswordOptions;
+export { PasswordOptions };
