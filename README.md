@@ -40,7 +40,7 @@ honeydew
 ## Sample Outputs
 ### Random Password
 ```
-Your generated password is: cheese09tribunal+
+Your generated password is: ch33setRi6un@l
 ```
 
 ### Enhanced Base Password
