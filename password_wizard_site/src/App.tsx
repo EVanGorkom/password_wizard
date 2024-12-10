@@ -4,13 +4,13 @@ import './App.css';
 import { Intro } from './components/Intro/intro.tsx'
 import { PasswordOptions } from './components/PasswordOption/passwordOption.tsx';
 import { SimplePassword } from './components/SimplePassword/simplePassword.tsx';
+import { BalancedPassword } from './components/BalancedPassword/balancedPassword.tsx';
+import { StrongPassword } from './components/StrongPassword/strongPassword.tsx';
 import { CipherPassword } from './components/CipherPassword/cipherPassword.tsx';
 
 
 function App() {
-  const [passwordType, setPasswordType] = useState<"simple" | "cipher">(
-    "simple"
-  );
+  const [passwordType, setPasswordType] = useState<"simple" | "balanced" | "strong" | "cipher">("simple");
   const [cipherInput, setCipherInput] = useState("");
 
   const handleCipherInputChange = (
@@ -36,9 +36,10 @@ function App() {
       </div>
 
       <div className="password-output">
-        {passwordType === "simple" ? (
-          <SimplePassword />
-        ) : (
+        {passwordType === "simple" && <SimplePassword />}
+        {passwordType === "balanced" && <BalancedPassword />}
+        {passwordType === "strong" && <StrongPassword />}
+        {passwordType === "cipher" && (
           <div>
             <input
               type="text"
