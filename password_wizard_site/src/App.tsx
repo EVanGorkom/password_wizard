@@ -21,36 +21,38 @@ function App() {
 
   return (
     <div className="app">
-      <div>
-        <img src={wizardLogo} className="logo" alt="Password Wizard logo" />
-      </div>
+      <div className="min-h-screen bg-gradient-to-b from-purple-700 to-indigo-950">
+        <div>
+          <img src={wizardLogo} className="logo" alt="Password Wizard logo" />
+        </div>
 
-      <h1>Password Wizard</h1>
+        <h1>Password Wizard</h1>
 
-      <div className="intro">
-        <Intro />
-      </div>
+        <div className="intro">
+          <Intro />
+        </div>
 
-      <div className="password-options">
-        <PasswordOptions setPasswordType={setPasswordType} />
-      </div>
+        <div className="password-options">
+          <PasswordOptions setPasswordType={setPasswordType} />
+        </div>
 
-      <div className="password-output">
-        {passwordType === "simple" && <SimplePassword />}
-        {passwordType === "balanced" && <BalancedPassword />}
-        {passwordType === "strong" && <StrongPassword />}
-        {passwordType === "cipher" && (
-          <div>
-            <input
-              type="text"
-              placeholder="Enter text to cipher"
-              value={cipherInput}
-              onChange={handleCipherInputChange}
-              className="cipher-input"
-            />
-            <CipherPassword userInput={cipherInput} />
-          </div>
-        )}
+        <div className="password-output">
+          {passwordType === "simple" && <SimplePassword />}
+          {passwordType === "balanced" && <BalancedPassword />}
+          {passwordType === "strong" && <StrongPassword />}
+          {passwordType === "cipher" && (
+            <div>
+              <input
+                type="text"
+                placeholder="Enter text to cipher"
+                value={cipherInput}
+                onChange={handleCipherInputChange}
+                className="cipher-input"
+              />
+              <CipherPassword userInput={cipherInput} />
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
