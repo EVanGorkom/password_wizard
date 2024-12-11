@@ -14,7 +14,24 @@ function SimplePassword() {
     ];
 
     const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-    const symbols = ["!","@","#","$","%","^","&","*","-","_","+","=","|",":","/","?"];
+    const symbols = [
+        "!",
+        "@",
+        "#",
+        "$",
+        "%",
+        "^",
+        "&",
+        "*",
+        "-",
+        "_",
+        "+",
+        "=",
+        "|",
+        ":",
+        "/",
+        "?",
+    ];
 
     function getRandomWord() {
         const randomIndex = Math.floor(Math.random() * wordBank.length);
@@ -54,10 +71,14 @@ function SimplePassword() {
 
     useEffect(() => {
         generateSimplePassword();
-    }, []); 
+    }, []);
 
     return (
         <div className="simple-password">
+        <p>
+            This password will consist of a combination of words and include at
+            least one symbol, one number, and one uppercase letter.
+        </p>
         <h2>Your Simple Password</h2>
         <p className="password-output">{password}</p>
         <button
