@@ -20,31 +20,41 @@ function BalancedPassword() {
 
     function charReplacement(basePassword: string) {
         const lettersConversionHash: { [key: string]: string[] } = {
-            a: ["@", "4"],
-            b: ["6", "8"],
-            e: ["3"],
-            i: ["!", "1"],
-            l: ["|", "7"],
-            o: ["0"],
-            p: ["9"],
-            s: ["$", "5"],
-            t: ["+"],
-            z: ["2"],
+        a: ["@", "4"],
+        b: ["6", "8"],
+        e: ["3"],
+        i: ["!", "1"],
+        l: ["|", "7"],
+        o: ["0"],
+        p: ["9"],
+        s: ["$", "5"],
+        t: ["+"],
+        z: ["2"],
         };
 
         const passwordChars = basePassword.split("");
+        const eligibleIndexes = passwordChars
+        .map((char, index) => (lettersConversionHash[char] ? index : null))
+        .filter((index) => index !== null);
+
+        if (eligibleIndexes.length === 0) {
+        // No eligible characters for replacement, return the base password
+        return basePassword;
+        }
+
         let replacementCount = 0;
+        while (replacementCount < 3 && eligibleIndexes.length > 0) {
+        const randomIndex = eligibleIndexes[
+            Math.floor(Math.random() * eligibleIndexes.length)
+        ] as number;
 
-        while (replacementCount < 3) {
-            const index = Math.floor(Math.random() * passwordChars.length);
-            const char = passwordChars[index];
+        const char = passwordChars[randomIndex];
+        const replacements = lettersConversionHash[char];
 
-            if (lettersConversionHash[char]) {
-                const replacements = lettersConversionHash[char];
-                passwordChars[index] =
-                replacements[Math.floor(Math.random() * replacements.length)];
-                replacementCount++;
-            }
+        passwordChars[randomIndex] =
+            replacements[Math.floor(Math.random() * replacements.length)];
+        eligibleIndexes.splice(eligibleIndexes.indexOf(randomIndex), 1);
+        replacementCount++;
         }
 
         return passwordChars.join("");
@@ -70,13 +80,16 @@ function BalancedPassword() {
 
     useEffect(() => {
         generateBalancedPassword();
-    });
-
+    }, []);
 
     return (
         <div className="balanced-password">
-            <h2>Your Balanced Password</h2>
-            <p className="password-output">{password}</p>
+        <p>
+            This password will consist of a random combination of words with some
+            letters being substituted for numbers and symbols where appropriate.
+        </p>
+        <h2>Your Balanced Password</h2>
+        <p className="password-output">{password}</p>
         <button
             onClick={generateBalancedPassword}
             className="password-generate-button"
