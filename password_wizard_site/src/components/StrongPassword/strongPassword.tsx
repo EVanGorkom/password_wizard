@@ -3,9 +3,53 @@ import { useState, useEffect } from "react";
 function StrongPassword() {
     const [password, setPassword] = useState("");
 
-    const letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+    const letters = [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z",
+    ];
     const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-    const symbols = ["!","@","#","$","%","^","&","*","-","_","+","=","|",":","/","?"];
+    const symbols = [
+        "!",
+        "@",
+        "#",
+        "$",
+        "%",
+        "^",
+        "&",
+        "*",
+        "-",
+        "_",
+        "+",
+        "=",
+        "|",
+        ":",
+        "/",
+        "?",
+    ];
 
     function getRandomLetter() {
         return letters[Math.floor(Math.random() * letters.length)];
@@ -24,8 +68,8 @@ function StrongPassword() {
     }
 
     function generateStrongPassword() {
-        const minLength = 8;
-        const maxLength = 15;
+        const minLength = 10;
+        const maxLength = 16;
         const passwordLength =
         Math.floor(Math.random() * (maxLength - minLength + 1)) + minLength;
 
@@ -62,10 +106,14 @@ function StrongPassword() {
 
     useEffect(() => {
         generateStrongPassword();
-    });
+    }, []);
 
     return (
         <div className="strong-password">
+        <p>
+            This password will consist of a random combination of letters, symbols,
+            and numbers with a random assortment of uppercase letters as well.
+        </p>
         <h2>Your Strong Password</h2>
         <p className="password-output">{password}</p>
         <button
