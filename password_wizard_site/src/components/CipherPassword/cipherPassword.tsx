@@ -22,13 +22,18 @@ function CipherPassword({ userInput }: CipherPasswordProps) {
     };
 
     const generateCipher = (): string => {
-        if (!userInput) return "Enter text to cipher";
+        if (!userInput) return "Enter text to scramble";
         const shift = Math.floor(Math.random() * 25) + 1; // Random shift between 1 and 25
         return caesarianShift(userInput, shift);
     };
 
     return (
         <div>
+        <p>
+            This password will take a word or phrase and scramble it using
+            encryption techniques and then add in numbers, symbols, and capital
+            letters to increase it's security.
+        </p>
         <h3>Ciphered Password:</h3>
         <p className="ciphered-password">{generateCipher()}</p>
         </div>

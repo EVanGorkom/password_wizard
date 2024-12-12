@@ -21,9 +21,9 @@ function App() {
 
   return (
     <div className="app">
-      <div className="min-h-screen bg-gradient-to-b from-purple-700 to-indigo-950">
+      <div className="bg-black">
         <div>
-          <img src={wizardLogo} className="logo" alt="Password Wizard logo" />
+          <img src={wizardLogo} height="100" className="logo" alt="Password Wizard logo" />
         </div>
 
         <h1>Password Wizard</h1>

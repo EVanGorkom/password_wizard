@@ -11,7 +11,7 @@ function PasswordOptions({ setPasswordType }: PasswordOptionsProps) {
     };
 
     return (
-        <div className="password-options">
+        <div className="flex-auto">
             <button
                 onClick={() => handleOptionChange("simple")}
                 className="option-button"
