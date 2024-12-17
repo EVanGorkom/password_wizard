@@ -20,9 +20,9 @@ function App() {
   };
 
   return (
-    <div className="app">
+    <div className="bg">
       <div className="bg-black">
-        <div>
+        <div className="box-border">
           <img src={wizardLogo} height="100" className="logo" alt="Password Wizard logo" />
         </div>
 
@@ -36,22 +36,30 @@ function App() {
           <PasswordOptions setPasswordType={setPasswordType} />
         </div>
 
-        <div className="password-output">
-          {passwordType === "simple" && <SimplePassword />}
-          {passwordType === "balanced" && <BalancedPassword />}
-          {passwordType === "strong" && <StrongPassword />}
-          {passwordType === "cipher" && (
-            <div>
-              <input
-                type="text"
-                placeholder="Enter text to cipher"
-                value={cipherInput}
-                onChange={handleCipherInputChange}
-                className="cipher-input"
-              />
-              <CipherPassword userInput={cipherInput} />
-            </div>
-          )}
+        <div>
+          <div className="password_option_button">
+            {passwordType === "simple" && <SimplePassword />}
+          </div>
+          <div className="password_option_button">
+            {passwordType === "balanced" && <BalancedPassword />}
+          </div>
+          <div className="password_option_button">
+            {passwordType === "strong" && <StrongPassword />}
+          </div>
+          <div className="password_option_button">
+            {passwordType === "cipher" && (
+              <div>
+                <input
+                  type="text"
+                  placeholder="Enter text to cipher"
+                  value={cipherInput}
+                  onChange={handleCipherInputChange}
+                  className="cipher-input"
+                />
+                <CipherPassword userInput={cipherInput} />
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

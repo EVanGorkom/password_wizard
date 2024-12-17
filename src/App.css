@@ -1,8 +1,9 @@
-/* #root {
+#root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: blueviolet;
 }
 
 .logo {
@@ -12,10 +13,10 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #eeeef5aa);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #e3eef1aa);
 }
 
 @keyframes logo-spin {
@@ -37,6 +38,23 @@
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
-} */
+.password-options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.password_option_button {
+  padding: 0.5rem 1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.password_option_button:hover {
+  background-color: #45a049;
+}
