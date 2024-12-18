@@ -1,16 +1,16 @@
-import { useState } from 'react';
-import wizardLogo from './assets/password_wizard_logo_2.png';
-import './App.css';
-import { Intro } from './components/Intro/intro.tsx'
-import { PasswordOptions } from './components/PasswordOption/passwordOption.tsx';
-import { SimplePassword } from './components/SimplePassword/simplePassword.tsx';
-import { BalancedPassword } from './components/BalancedPassword/balancedPassword.tsx';
-import { StrongPassword } from './components/StrongPassword/strongPassword.tsx';
-import { CipherPassword } from './components/CipherPassword/cipherPassword.tsx';
-
+import { useState } from "react";
+import wizardLogo from "./assets/password_wizard_logo_2.png";
+import "./App.css";
+import { Intro } from "./components/Intro/intro.tsx";
+import { SimplePassword } from "./components/SimplePassword/simplePassword.tsx";
+import { BalancedPassword } from "./components/BalancedPassword/balancedPassword.tsx";
+import { StrongPassword } from "./components/StrongPassword/strongPassword.tsx";
+import { CipherPassword } from "./components/CipherPassword/cipherPassword.tsx";
 
 function App() {
-  const [passwordType, setPasswordType] = useState<"simple" | "balanced" | "strong" | "cipher">("simple");
+  const [passwordType, setPasswordType] = useState<
+    "simple" | "balanced" | "strong" | "cipher"
+  >("simple");
   const [cipherInput, setCipherInput] = useState("");
 
   const handleCipherInputChange = (
@@ -19,11 +19,42 @@ function App() {
     setCipherInput(event.target.value);
   };
 
+  const renderPasswordComponent = () => {
+    switch (passwordType) {
+      case "simple":
+        return <SimplePassword />;
+      case "balanced":
+        return <BalancedPassword />;
+      case "strong":
+        return <StrongPassword />;
+      case "cipher":
+        return (
+          <div>
+            <input
+              type="text"
+              placeholder="Enter text to cipher"
+              value={cipherInput}
+              onChange={handleCipherInputChange}
+              className="cipher-input"
+            />
+            <CipherPassword userInput={cipherInput} />
+          </div>
+        );
+      default:
+        return <SimplePassword />;
+    }
+  };
+
   return (
     <div className="bg">
       <div className="bg-black">
         <div className="box-border">
-          <img src={wizardLogo} height="100" className="logo" alt="Password Wizard logo" />
+          <img
+            src={wizardLogo}
+            height="100"
+            className="logo"
+            alt="Password Wizard logo"
+          />
         </div>
 
         <h1>Password Wizard</h1>
@@ -33,34 +64,41 @@ function App() {
         </div>
 
         <div className="password-options">
-          <PasswordOptions setPasswordType={setPasswordType} />
+          <button
+            onClick={() => setPasswordType("simple")}
+            className={`password-button ${
+              passwordType === "simple" ? "active" : ""
+            }`}
+          >
+            Simple
+          </button>
+          <button
+            onClick={() => setPasswordType("balanced")}
+            className={`password-button ${
+              passwordType === "balanced" ? "active" : ""
+            }`}
+          >
+            Balanced
+          </button>
+          <button
+            onClick={() => setPasswordType("strong")}
+            className={`password-button ${
+              passwordType === "strong" ? "active" : ""
+            }`}
+          >
+            Strong
+          </button>
+          <button
+            onClick={() => setPasswordType("cipher")}
+            className={`password-button ${
+              passwordType === "cipher" ? "active" : ""
+            }`}
+          >
+            Cipher
+          </button>
         </div>
 
-        <div>
-          <div className="password_option_button">
-            {passwordType === "simple" && <SimplePassword />}
-          </div>
-          <div className="password_option_button">
-            {passwordType === "balanced" && <BalancedPassword />}
-          </div>
-          <div className="password_option_button">
-            {passwordType === "strong" && <StrongPassword />}
-          </div>
-          <div className="password_option_button">
-            {passwordType === "cipher" && (
-              <div>
-                <input
-                  type="text"
-                  placeholder="Enter text to cipher"
-                  value={cipherInput}
-                  onChange={handleCipherInputChange}
-                  className="cipher-input"
-                />
-                <CipherPassword userInput={cipherInput} />
-              </div>
-            )}
-          </div>
-        </div>
+        <div className="password-output">{renderPasswordComponent()}</div>
       </div>
     </div>
   );
