@@ -56,6 +56,85 @@
   transition: background-color 0.3s ease;
 }
 
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.toggle-btn {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-btn.random {
+  background-color: #00affa;
+}
+
+.toggle-btn.custom {
+  background-color: #1dc987;
+}
+
+.toggle-btn .thumb {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 22px;
+  height: 22px;
+  background-color: white;
+  border-radius: 50%;
+  transition: left 0.3s ease;
+}
+
+.toggle-btn.random .thumb {
+  left: 4px;
+}
+
+.toggle-btn.custom .thumb {
+  left: 34px;
+}
+
+.toggle-label {
+  font-size: 1.25rem;
+  color: white;
+  font-weight: bold;
+}
+
+.password-options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.password-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #510774;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.password-button.active {
+  background-color: #3a0553;
+}
+
 .password-button:hover {
   background-color: #810bb8;
+}
+
+.password-output {
+  margin-top: 2rem;
 }

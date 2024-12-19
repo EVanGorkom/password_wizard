@@ -8,6 +8,7 @@ import { StrongPassword } from "./components/StrongPassword/strongPassword.tsx";
 import { CipherPassword } from "./components/CipherPassword/cipherPassword.tsx";
 
 function App() {
+  const [mode, setMode] = useState<"random" | "custom">("random");
   const [passwordType, setPasswordType] = useState<
     "simple" | "balanced" | "strong" | "cipher"
   >("simple");
@@ -63,41 +64,64 @@ function App() {
           <Intro />
         </div>
 
-        <div className="password-options">
+        {/* Toggle Switch */}
+        <div className="toggle-container">
+          <span className="toggle-label">Random</span>
           <button
-            onClick={() => setPasswordType("simple")}
-            className={`password-button ${
-              passwordType === "simple" ? "active" : ""
-            }`}
+            className={`toggle-btn ${mode === "random" ? "random" : "custom"}`}
+            onClick={() => {
+              setMode(mode === "random" ? "custom" : "random");
+              setPasswordType(mode === "random" ? "cipher" : "simple");
+            }}
           >
-            Simple
+            <div className="thumb"></div>
           </button>
-          <button
-            onClick={() => setPasswordType("balanced")}
-            className={`password-button ${
-              passwordType === "balanced" ? "active" : ""
-            }`}
-          >
-            Balanced
-          </button>
-          <button
-            onClick={() => setPasswordType("strong")}
-            className={`password-button ${
-              passwordType === "strong" ? "active" : ""
-            }`}
-          >
-            Strong
-          </button>
-          <button
-            onClick={() => setPasswordType("cipher")}
-            className={`password-button ${
-              passwordType === "cipher" ? "active" : ""
-            }`}
-          >
-            Cipher
-          </button>
+          <span className="toggle-label">Custom</span>
         </div>
 
+        {/* Button Group */}
+        <div className="password-options">
+          {mode === "random" && (
+            <>
+              <button
+                onClick={() => setPasswordType("simple")}
+                className={`password-button ${
+                  passwordType === "simple" ? "active" : ""
+                }`}
+              >
+                Simple
+              </button>
+              <button
+                onClick={() => setPasswordType("balanced")}
+                className={`password-button ${
+                  passwordType === "balanced" ? "active" : ""
+                }`}
+              >
+                Balanced
+              </button>
+              <button
+                onClick={() => setPasswordType("strong")}
+                className={`password-button ${
+                  passwordType === "strong" ? "active" : ""
+                }`}
+              >
+                Strong
+              </button>
+            </>
+          )}
+          {mode === "custom" && (
+            <button
+              onClick={() => setPasswordType("cipher")}
+              className={`password-button ${
+                passwordType === "cipher" ? "active" : ""
+              }`}
+            >
+              Cipher
+            </button>
+          )}
+        </div>
+
+        {/* Dynamically Rendered Password Component */}
         <div className="password-output">{renderPasswordComponent()}</div>
       </div>
     </div>
