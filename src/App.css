@@ -76,11 +76,11 @@
 }
 
 .toggle-btn.random {
-  background-color: #00affa;
+  background-color: #510774;
 }
 
 .toggle-btn.custom {
-  background-color: #1dc987;
+  background-color: #af08e6;
 }
 
 .toggle-btn .thumb {
@@ -115,7 +115,7 @@
   margin: 2rem 0;
 }
 
-.password-button {
+.password-button-rdm {
   padding: 0.75rem 1.5rem;
   background-color: #510774;
   color: white;
@@ -126,12 +126,31 @@
   transition: background-color 0.3s ease;
 }
 
-.password-button.active {
+.password-button-custom {
+  padding: 0.75rem 1.5rem;
+  background-color: #af08e6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.password-button-rdm.active {
   background-color: #3a0553;
 }
 
-.password-button:hover {
+.password-button-rdm:hover {
   background-color: #810bb8;
+}
+
+.password-button-custom.active {
+  background-color: #9607c6;
+}
+
+.password-button-custom:hover {
+  background-color: #c00afc;
 }
 
 .password-output {

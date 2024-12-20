@@ -85,7 +85,7 @@ function App() {
             <>
               <button
                 onClick={() => setPasswordType("simple")}
-                className={`password-button ${
+                className={`password-button-rdm ${
                   passwordType === "simple" ? "active" : ""
                 }`}
               >
@@ -93,7 +93,7 @@ function App() {
               </button>
               <button
                 onClick={() => setPasswordType("balanced")}
-                className={`password-button ${
+                className={`password-button-rdm ${
                   passwordType === "balanced" ? "active" : ""
                 }`}
               >
@@ -101,7 +101,7 @@ function App() {
               </button>
               <button
                 onClick={() => setPasswordType("strong")}
-                className={`password-button ${
+                className={`password-button-rdm ${
                   passwordType === "strong" ? "active" : ""
                 }`}
               >
@@ -112,7 +112,7 @@ function App() {
           {mode === "custom" && (
             <button
               onClick={() => setPasswordType("cipher")}
-              className={`password-button ${
+              className={`password-button-custom ${
                 passwordType === "cipher" ? "active" : ""
               }`}
             >
