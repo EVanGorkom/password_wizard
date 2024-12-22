@@ -60,7 +60,7 @@ password-generator/
 - Add an option to specify password length and complexity requirements.
 - Implement a graphical user interface (GUI).
 - Support saving generated passwords to a file.
-
+- For the custom option create an input for selecting which symbols, numbers, and length to use for a word.
 
 ---
 ---
