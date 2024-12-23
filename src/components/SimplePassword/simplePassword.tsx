@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import './simplePassword.css'
 
 function SimplePassword() {
     const [password, setPassword] = useState("");

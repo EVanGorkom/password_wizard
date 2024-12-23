@@ -122,7 +122,7 @@ function App() {
         </div>
 
         {/* Dynamically Rendered Password Component */}
-        <div className="password-output">{renderPasswordComponent()}</div>
+        <div className="password-output-box">{renderPasswordComponent()}</div>
       </div>
     </div>
   );
