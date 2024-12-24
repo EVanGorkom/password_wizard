@@ -115,13 +115,15 @@ function StrongPassword() {
             and numbers with a random assortment of uppercase letters as well.
         </p>
         <h2>Your Strong Password</h2>
-        <p className="password-output">{password}</p>
-        <button
-            onClick={generateStrongPassword}
-            className="password-generate-button"
-        >
-            Generate
-        </button>
+        <div className="button-output">
+            <button
+                onClick={generateStrongPassword}
+                className="password-generate-button"
+                >
+                Generate
+            </button>
+            <p className="password-output">{password}</p>
+            </div>
         </div>
     );
 }

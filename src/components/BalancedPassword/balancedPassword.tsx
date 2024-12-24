@@ -89,13 +89,15 @@ function BalancedPassword() {
             letters being substituted for numbers and symbols where appropriate.
         </p>
         <h2>Your Balanced Password</h2>
-        <button
-            onClick={generateBalancedPassword}
-            className="password-generate-button"
-        >
-            Generate
-        </button>
-        <p className="password-output">{password}</p>
+        <div className="button-output">
+            <button
+                onClick={generateBalancedPassword}
+                className="password-generate-button"
+            >
+                Generate
+            </button>
+            <p className="password-output">{password}</p>
+            </div>
         </div>
     );
 }

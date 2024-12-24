@@ -81,13 +81,13 @@ function SimplePassword() {
             least one symbol, one number, and one uppercase letter.
         </p>
         <h2>Your Simple Password</h2>
-        <p className="password-output">{password}</p>
         <button
             onClick={generateSimplePassword}
             className="password-generate-button"
         >
             Generate
         </button>
+        <p className="password-output">{password}</p>
         </div>
     );
 }
