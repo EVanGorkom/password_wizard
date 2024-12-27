@@ -1,10 +1,15 @@
-import { useState, useEffect } from "react";
-import './simplePassword.css'
+import { useEffect, useCallback } from "react";
+import "./simplePassword.css";
 
-function SimplePassword() {
-    const [password, setPassword] = useState("");
+type SimplePasswordProps = {
+    onPasswordGenerate: (password: string) => void;
+    triggerGenerate: boolean; 
+};
 
-    // Mocked word bank (can be replaced by an API or local file)
+function SimplePassword({
+    onPasswordGenerate,
+    triggerGenerate,
+}: SimplePasswordProps) {
     const wordBank = [
         "password",
         "example",
@@ -13,7 +18,6 @@ function SimplePassword() {
         "simple",
         "user",
     ];
-
     const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
     const symbols = [
         "!",
@@ -34,45 +38,50 @@ function SimplePassword() {
         "?",
     ];
 
-    function getRandomWord() {
+    const getRandomWord = useCallback(() => {
         const randomIndex = Math.floor(Math.random() * wordBank.length);
         return wordBank[randomIndex];
-    }
+    }, []);
 
-    function getRandomNumber() {
+    const getRandomNumber = useCallback(() => {
         return numbers[Math.floor(Math.random() * numbers.length)];
-    }
+    }, []);
 
-    function getRandomSymbol() {
+    const getRandomSymbol = useCallback(() => {
         return symbols[Math.floor(Math.random() * symbols.length)];
-    }
+    }, []);
 
-    function randomUpcase(word: string) {
+    const randomUpcase = useCallback((word: string) => {
         const chars = word.split("");
         const randomIndex = Math.floor(Math.random() * chars.length);
         chars[randomIndex] = chars[randomIndex].toUpperCase();
         return chars.join("");
-    }
+    }, []);
 
-    function addSymbolOrNumber(word: string) {
+    const addSymbolOrNumber = useCallback(
+        (word: string) => {
         const shouldAddToStart = Math.random() < 0.5; // 50% chance
         const isNumber = Math.random() < 0.5; // 50% chance for number or symbol
         const char = isNumber ? getRandomNumber() : getRandomSymbol();
 
         return shouldAddToStart ? `${char}${word}` : `${word}${char}`;
-    }
+        },
+        [getRandomNumber, getRandomSymbol]
+    );
 
-    function generateSimplePassword() {
+    const generateSimplePassword = useCallback(() => {
         const word1 = addSymbolOrNumber(randomUpcase(getRandomWord()));
         const word2 = addSymbolOrNumber(randomUpcase(getRandomWord()));
 
         const finalPassword = `${word1}${word2}`;
-        setPassword(finalPassword);
-    }
+        onPasswordGenerate(finalPassword); // Send the password to the parent component
+    }, [addSymbolOrNumber, getRandomWord, randomUpcase, onPasswordGenerate]);
 
     useEffect(() => {
+        if (triggerGenerate) {
         generateSimplePassword();
-    }, []);
+        }
+    }, [triggerGenerate, generateSimplePassword]);
 
     return (
         <div className="simple-password">
@@ -80,14 +89,6 @@ function SimplePassword() {
             This password will consist of a combination of words and include at
             least one symbol, one number, and one uppercase letter.
         </p>
-        <h2>Your Simple Password</h2>
-        <button
-            onClick={generateSimplePassword}
-            className="password-generate-button"
-        >
-            Generate
-        </button>
-        <p className="password-output">{password}</p>
         </div>
     );
 }
