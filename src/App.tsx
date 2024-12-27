@@ -8,6 +8,7 @@ import { BalancedPassword } from "./components/BalancedPassword/balancedPassword
 import { StrongPassword } from "./components/StrongPassword/strongPassword.tsx";
 import { CipherPassword } from "./components/CipherPassword/cipherPassword.tsx";
 
+
 function App() {
   const [mode, setMode] = useState<"random" | "custom">("random");
   const [passwordType, setPasswordType] = useState<
@@ -16,6 +17,8 @@ function App() {
   const [cipherInput, setCipherInput] = useState("");
   const [generatedPassword, setGeneratedPassword] = useState("");
   const [generateTrigger, setGenerateTrigger] = useState(0);
+  const [passwordBank, setPasswordBank] = useState<string[]>([]); 
+
 
   const handleCipherInputChange = (
     event: React.ChangeEvent<HTMLInputElement>
@@ -31,53 +34,74 @@ function App() {
   };
 
   const handleSavePassword = () => {
-    // Implement save logic here
+    if (generatedPassword && !passwordBank.includes(generatedPassword)) {
+      setPasswordBank((prev) => [...prev, generatedPassword]);
+    }
+  };
+
+  const handleDownloadWordBank = () => {
+    const blob = new Blob([passwordBank.join("\n")], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "password_wizard_bank.txt";
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  const handleGeneratePassword = () => {
+    setGenerateTrigger((prev) => prev + 1);
   };
 
   const renderPasswordComponent = () => {
     switch (passwordType) {
       case "simple":
-        return <SimplePassword 
-          onPasswordGenerate={setGeneratedPassword} 
-          triggerGenerate={generateTrigger}
-        />;
+        return (
+          <SimplePassword
+            onPasswordGenerate={setGeneratedPassword}
+            triggerGenerate={generateTrigger}
+          />
+        );
       case "balanced":
-        return <BalancedPassword 
-          onPasswordGenerate={setGeneratedPassword} 
-          triggerGenerate={generateTrigger}
-        />;
+        return (
+          <BalancedPassword
+            onPasswordGenerate={setGeneratedPassword}
+            triggerGenerate={generateTrigger}
+          />
+        );
       case "strong":
-        return <StrongPassword 
-          onPasswordGenerate={setGeneratedPassword}
-          triggerGenerate={generateTrigger}
-          />;
-          case "cipher":
-            return (
-              <div>
+        return (
+          <StrongPassword
+            onPasswordGenerate={setGeneratedPassword}
+            triggerGenerate={generateTrigger}
+          />
+        );
+      case "cipher":
+        return (
+          <div>
             <input
               type="text"
               placeholder="Enter text to cipher"
               value={cipherInput}
               onChange={handleCipherInputChange}
               className="cipher-input"
-              />
+            />
             <CipherPassword
               userInput={cipherInput}
               onPasswordGenerate={setGeneratedPassword}
-              />
+            />
           </div>
         );
-        default:
-          return <SimplePassword 
-          onPasswordGenerate={setGeneratedPassword} 
-          triggerGenerate={generateTrigger}
-        />;
+      default:
+        return (
+          <SimplePassword
+            onPasswordGenerate={setGeneratedPassword}
+            triggerGenerate={generateTrigger}
+          />
+        );
     }
   };
 
-  const handleGeneratePassword = () => {
-    setGenerateTrigger((prev) => prev + 1);
-  };
 
   return (
     <div className="bg">
@@ -162,12 +186,29 @@ function App() {
           </button>
           <div className="password-display">{generatedPassword}</div>
           <button className="copy-button" onClick={handleCopyToClipboard}>
-            <img src={copy_icon} height="17px"/>
+            <img src={copy_icon} height="17px" />
           </button>
           <button className="save-button" onClick={handleSavePassword}>
             Save
           </button>
         </div>
+
+        {passwordBank.length > 0 && (
+          <div className="password-bank">
+            <h3>Saved Passwords:</h3>
+            <textarea
+              readOnly
+              className="password-bank-textarea"
+              value={passwordBank.join("\n")}
+            />
+            <button
+              className="download-button"
+              onClick={handleDownloadWordBank}
+            >
+              Download Word Bank
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

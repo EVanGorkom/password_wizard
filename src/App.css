@@ -196,3 +196,28 @@
   text-align: center;
   overflow-wrap: break-word;
 }
+
+.password-bank {
+  margin: 2rem auto;
+  max-width: 600px;
+  text-align: left;
+}
+
+.password-bank h3 {
+  font-size: 1.5rem;
+  color: aliceblue;
+  margin-bottom: 0.5rem;
+}
+
+.password-bank-textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 1rem;
+  border: 2px solid aliceblue;
+  border-radius: 8px;
+  background-color: #060665;
+  color: aliceblue;
+  font-size: 1rem;
+  resize: none;
+  overflow-y: auto;
+}
