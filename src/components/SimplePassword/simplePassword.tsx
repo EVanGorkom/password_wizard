@@ -3,7 +3,7 @@ import "./simplePassword.css";
 
 type SimplePasswordProps = {
     onPasswordGenerate: (password: string) => void;
-    triggerGenerate: boolean; 
+    triggerGenerate: number; 
 };
 
 function SimplePassword({

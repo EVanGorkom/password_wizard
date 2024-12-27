@@ -1,9 +1,14 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
-function BalancedPassword() {
-    const [password, setPassword] = useState("");
+interface BalancedPasswordProps {
+    onPasswordGenerate: (password: string) => void;
+    triggerGenerate: number;
+}
 
-    // Mocked word bank (this can be replaced by fetching from an API or local file)
+function BalancedPassword({
+    onPasswordGenerate,
+    triggerGenerate,
+}: BalancedPasswordProps) {
     const wordBank = [
         "password",
         "example",
@@ -38,7 +43,6 @@ function BalancedPassword() {
         .filter((index) => index !== null);
 
         if (eligibleIndexes.length === 0) {
-        // No eligible characters for replacement, return the base password
         return basePassword;
         }
 
@@ -75,12 +79,12 @@ function BalancedPassword() {
         const alteredWord2 = randomUpcase(charReplacement(word2));
 
         const finalPassword = `${alteredWord1}${alteredWord2}`;
-        setPassword(finalPassword);
+        onPasswordGenerate(finalPassword);
     }
 
     useEffect(() => {
         generateBalancedPassword();
-    }, []);
+    }, [triggerGenerate]);
 
     return (
         <div className="balanced-password">
@@ -88,16 +92,6 @@ function BalancedPassword() {
             This password will consist of a random combination of words with some
             letters being substituted for numbers and symbols where appropriate.
         </p>
-        <h2>Your Balanced Password</h2>
-        <div className="button-output">
-            <button
-                onClick={generateBalancedPassword}
-                className="password-generate-button"
-            >
-                Generate
-            </button>
-            <p className="password-output">{password}</p>
-            </div>
         </div>
     );
 }

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import wizardLogo from "./assets/password_wizard_logo_2.png";
+import copy_icon from "./assets/copy-icon.png"
 import "./App.css";
 import { Intro } from "./components/Intro/intro.tsx";
 import { SimplePassword } from "./components/SimplePassword/simplePassword.tsx";
@@ -14,7 +15,7 @@ function App() {
   >("simple");
   const [cipherInput, setCipherInput] = useState("");
   const [generatedPassword, setGeneratedPassword] = useState("");
-  const [generateTrigger, setGenerateTrigger] = useState(false);
+  const [generateTrigger, setGenerateTrigger] = useState(0);
 
   const handleCipherInputChange = (
     event: React.ChangeEvent<HTMLInputElement>
@@ -41,42 +42,41 @@ function App() {
           triggerGenerate={generateTrigger}
         />;
       case "balanced":
-        return <BalancedPassword onPasswordGenerate={setGeneratedPassword} />;
+        return <BalancedPassword 
+          onPasswordGenerate={setGeneratedPassword} 
+          triggerGenerate={generateTrigger}
+        />;
       case "strong":
-        return <StrongPassword onPasswordGenerate={setGeneratedPassword} />;
-      case "cipher":
-        return (
-          <div>
+        return <StrongPassword 
+          onPasswordGenerate={setGeneratedPassword}
+          triggerGenerate={generateTrigger}
+          />;
+          case "cipher":
+            return (
+              <div>
             <input
               type="text"
               placeholder="Enter text to cipher"
               value={cipherInput}
               onChange={handleCipherInputChange}
               className="cipher-input"
-            />
+              />
             <CipherPassword
               userInput={cipherInput}
               onPasswordGenerate={setGeneratedPassword}
-            />
+              />
           </div>
         );
-      default:
-        return <SimplePassword onPasswordGenerate={setGeneratedPassword} />;
+        default:
+          return <SimplePassword 
+          onPasswordGenerate={setGeneratedPassword} 
+          triggerGenerate={generateTrigger}
+        />;
     }
   };
 
   const handleGeneratePassword = () => {
     setGenerateTrigger((prev) => prev + 1);
-    // switch (passwordType) {
-    //   case "simple":
-    //   case "balanced":
-    //   case "strong":
-    //   case "cipher":
-    //     // The `onPasswordGenerate` function in each component will handle generation
-    //     break;
-    //   default:
-    //     console.error("Unknown password type");
-    // }
   };
 
   return (
@@ -155,30 +155,21 @@ function App() {
         </div>
 
         {/* Dynamically Rendered Password Component */}
-        {/* <div className="password-output-box">{renderPasswordComponent()}</div> */}
         <div className="password-output-box">{renderPasswordComponent()}</div>
         <div className="password-row">
           <button className="generate-button" onClick={handleGeneratePassword}>
             Generate
           </button>
           <div className="password-display">{generatedPassword}</div>
-        </div>
-
-        {/* Button and Password Output Row */}
-        {/* <div className="password-row">
-          <button className="generate-button" onClick={handleGeneratePassword}>
-            Generate
-          </button>
-          <div className="password-display">{generatedPassword}</div> */}
           <button className="copy-button" onClick={handleCopyToClipboard}>
-            Copy
+            <img src={copy_icon} height="17px"/>
           </button>
           <button className="save-button" onClick={handleSavePassword}>
             Save
           </button>
         </div>
       </div>
-    // </div>
+    </div>
   );
 }
 

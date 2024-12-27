@@ -1,66 +1,20 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
-function StrongPassword() {
-    const [password, setPassword] = useState("");
+interface StrongPasswordProps {
+    onPasswordGenerate: (password: string) => void;
+    triggerGenerate: number;
+}
 
-    const letters = [
-        "a",
-        "b",
-        "c",
-        "d",
-        "e",
-        "f",
-        "g",
-        "h",
-        "i",
-        "j",
-        "k",
-        "l",
-        "m",
-        "n",
-        "o",
-        "p",
-        "q",
-        "r",
-        "s",
-        "t",
-        "u",
-        "v",
-        "w",
-        "x",
-        "y",
-        "z",
-    ];
-    const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-    const symbols = [
-        "!",
-        "@",
-        "#",
-        "$",
-        "%",
-        "^",
-        "&",
-        "*",
-        "-",
-        "_",
-        "+",
-        "=",
-        "|",
-        ":",
-        "/",
-        "?",
-    ];
+function StrongPassword({
+    onPasswordGenerate,
+    triggerGenerate,
+}: StrongPasswordProps) {
+    const letters = "abcdefghijklmnopqrstuvwxyz".split("");
+    const numbers = "1234567890".split("");
+    const symbols = "!@#$%^&*-_+=|:/?".split("");
 
-    function getRandomLetter() {
-        return letters[Math.floor(Math.random() * letters.length)];
-    }
-
-    function getRandomNumber() {
-        return numbers[Math.floor(Math.random() * numbers.length)];
-    }
-
-    function getRandomSymbol() {
-        return symbols[Math.floor(Math.random() * symbols.length)];
+    function getRandomItem(array: string[]) {
+        return array[Math.floor(Math.random() * array.length)];
     }
 
     function randomUpcase(char: string) {
@@ -73,26 +27,20 @@ function StrongPassword() {
         const passwordLength =
         Math.floor(Math.random() * (maxLength - minLength + 1)) + minLength;
 
-        const passwordComponents = [];
+        const passwordComponents: string[] = [
+        randomUpcase(getRandomItem(letters)),
+        getRandomItem(numbers),
+        getRandomItem(symbols),
+        ];
 
-        // Ensure at least one letter, one number, and one symbol
-        passwordComponents.push(randomUpcase(getRandomLetter()));
-        passwordComponents.push(getRandomNumber());
-        passwordComponents.push(getRandomSymbol());
-
-        // Fill the remaining length with random characters
         while (passwordComponents.length < passwordLength) {
-        const charType = Math.floor(Math.random() * 3); // 0 = letter, 1 = number, 2 = symbol
-        if (charType === 0) {
-            passwordComponents.push(randomUpcase(getRandomLetter()));
-        } else if (charType === 1) {
-            passwordComponents.push(getRandomNumber());
-        } else {
-            passwordComponents.push(getRandomSymbol());
-        }
+        const charType = Math.floor(Math.random() * 3);
+        if (charType === 0)
+            passwordComponents.push(randomUpcase(getRandomItem(letters)));
+        else if (charType === 1) passwordComponents.push(getRandomItem(numbers));
+        else passwordComponents.push(getRandomItem(symbols));
         }
 
-        // Shuffle the password components to ensure randomness
         for (let i = passwordComponents.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [passwordComponents[i], passwordComponents[j]] = [
@@ -101,12 +49,13 @@ function StrongPassword() {
         ];
         }
 
-        setPassword(passwordComponents.join(""));
+        const finalPassword = passwordComponents.join("");
+        onPasswordGenerate(finalPassword);
     }
 
     useEffect(() => {
         generateStrongPassword();
-    }, []);
+    }, [triggerGenerate]);
 
     return (
         <div className="strong-password">
@@ -114,16 +63,6 @@ function StrongPassword() {
             This password will consist of a random combination of letters, symbols,
             and numbers with a random assortment of uppercase letters as well.
         </p>
-        <h2>Your Strong Password</h2>
-        <div className="button-output">
-            <button
-                onClick={generateStrongPassword}
-                className="password-generate-button"
-                >
-                Generate
-            </button>
-            <p className="password-output">{password}</p>
-            </div>
         </div>
     );
 }
