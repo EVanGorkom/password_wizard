@@ -6,7 +6,7 @@ import { Intro } from "./components/Intro/intro.tsx";
 import { SimplePassword } from "./components/SimplePassword/simplePassword.tsx";
 import { BalancedPassword } from "./components/BalancedPassword/balancedPassword.tsx";
 import { StrongPassword } from "./components/StrongPassword/strongPassword.tsx";
-import { CipherPassword } from "./components/CipherPassword/cipherPassword.tsx";
+import { CustomPassword } from "./components/CustomPassword/customPassword.tsx";
 
 
 function App() {
@@ -14,16 +14,16 @@ function App() {
   const [passwordType, setPasswordType] = useState<
     "simple" | "balanced" | "strong" | "cipher"
   >("simple");
-  const [cipherInput, setCipherInput] = useState("");
+  const [customInput, setCustomInput] = useState("");
   const [generatedPassword, setGeneratedPassword] = useState("");
   const [generateTrigger, setGenerateTrigger] = useState(0);
   const [passwordBank, setPasswordBank] = useState<string[]>([]); 
 
 
-  const handleCipherInputChange = (
+  const handleCustomInputChange = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
-    setCipherInput(event.target.value);
+    setCustomInput(event.target.value);
   };
 
   const handleCopyToClipboard = () => {
@@ -82,12 +82,12 @@ function App() {
             <input
               type="text"
               placeholder="Enter text to cipher"
-              value={cipherInput}
-              onChange={handleCipherInputChange}
+              value={customInput}
+              onChange={handleCustomInputChange}
               className="cipher-input"
             />
-            <CipherPassword
-              userInput={cipherInput}
+            <CustomPassword
+              customInput={customInput}
               onPasswordGenerate={setGeneratedPassword}
             />
           </div>
