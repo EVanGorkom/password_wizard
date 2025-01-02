@@ -73,7 +73,8 @@ function CustomPassword({
             })
             .join("");
         };
-        password = caesarianShift(password, 3); // Example shift of 3
+        const randomShift = Math.floor(Math.random() * 25) + 1;
+        password = caesarianShift(password, randomShift);
         }
 
         // Scramble the password
