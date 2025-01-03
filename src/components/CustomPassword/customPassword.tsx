@@ -23,8 +23,14 @@ function CustomPassword({
         "^",
         "&",
         "*",
-        "(",
-        ")",
+        "-",
+        "_",
+        "+",
+        "=",
+        "|",
+        ":",
+        "/",
+        "?"
     ]);
     const [selectedNumbers, setSelectedNumbers] = useState([
         "0",
@@ -93,7 +99,11 @@ function CustomPassword({
             i: "1",
             o: "0",
             s: "$",
-            t: "7",
+            b: "6",
+            l: "|",
+            p: "9",
+            t: "+",
+            z: "2"
         };
         password = password
             .split("")
@@ -106,25 +116,24 @@ function CustomPassword({
 
     return (
         <div>
-        <p>
+            <p>
             Customize your password by selecting options below. Start with a base
             word or phrase, then add features to increase its security.
-        </p>
+            </p>
 
-        <div>
+            <div>
             <label>
-            <input
+                <input
                 type="checkbox"
                 checked={includeSymbols}
                 onChange={(e) => setIncludeSymbols(e.target.checked)}
-            />
-            Add Symbols
+                />
+                Add Symbols
             </label>
             {includeSymbols && (
-            <div>
+                <div>
                 <h4>Select Symbols:</h4>
-                {["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"].map(
-                (symbol) => (
+                {[ "!", "@", "#", "$", "%", "^", "&", "*", "-", "_", "+", "=", "|", ":", "/", "?"].map((symbol) => (
                     <label key={symbol}>
                     <input
                         type="checkbox"
@@ -141,76 +150,75 @@ function CustomPassword({
                     />
                     {symbol}
                     </label>
-                )
-                )}
-            </div>
+                ))}
+                </div>
             )}
-        </div>
+            </div>
 
-        <div>
+            <div>
             <label>
-            <input
+                <input
                 type="checkbox"
                 checked={includeNumbers}
                 onChange={(e) => setIncludeNumbers(e.target.checked)}
-            />
-            Add Numbers
+                />
+                Add Numbers
             </label>
             {includeNumbers && (
-            <div>
+                <div>
                 <h4>Select Numbers:</h4>
                 {["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].map(
-                (number) => (
+                    (number) => (
                     <label key={number}>
-                    <input
+                        <input
                         type="checkbox"
                         checked={selectedNumbers.includes(number)}
                         onChange={(e) => {
-                        if (e.target.checked) {
+                            if (e.target.checked) {
                             setSelectedNumbers((prev) => [...prev, number]);
-                        } else {
+                            } else {
                             setSelectedNumbers((prev) =>
-                            prev.filter((n) => n !== number)
+                                prev.filter((n) => n !== number)
                             );
-                        }
+                            }
                         }}
-                    />
-                    {number}
+                        />
+                        {number}
                     </label>
-                )
+                    )
                 )}
-            </div>
+                </div>
             )}
-        </div>
+            </div>
 
-        <div>
+            <div>
             <label>
-            <input
+                <input
                 type="checkbox"
                 checked={applyCipher}
                 onChange={(e) => setApplyCipher(e.target.checked)}
-            />
-            Cipher
+                />
+                Cipher
             </label>
             <label>
-            <input
+                <input
                 type="checkbox"
                 checked={applyScramble}
                 onChange={(e) => setApplyScramble(e.target.checked)}
-            />
-            Scramble
+                />
+                Scramble
             </label>
             <label>
-            <input
+                <input
                 type="checkbox"
                 checked={applyLeetSpeech}
                 onChange={(e) => setApplyLeetSpeech(e.target.checked)}
-            />
-            Leet Speech
+                />
+                Leet Speech
             </label>
-        </div>
+            </div>
 
-        <button onClick={handleGeneratePassword}>Generate Password</button>
+            <button onClick={handleGeneratePassword}>Generate Password</button>
         </div>
     );
 }
