@@ -12,7 +12,7 @@ import { CustomPassword } from "./components/CustomPassword/customPassword.tsx";
 function App() {
   const [mode, setMode] = useState<"random" | "custom">("random");
   const [passwordType, setPasswordType] = useState<
-    "simple" | "balanced" | "strong" | "cipher"
+    "simple" | "balanced" | "strong" | "custom"
   >("simple");
   const [customInput, setCustomInput] = useState("");
   const [generatedPassword, setGeneratedPassword] = useState("");
@@ -54,51 +54,54 @@ function App() {
   };
 
   const renderPasswordComponent = () => {
-    switch (passwordType) {
-      case "simple":
-        return (
-          <SimplePassword
+    if (mode === "custom") {
+      return (
+        <div>
+          <input
+            type="text"
+            placeholder="Enter text to customize"
+            value={customInput}
+            onChange={handleCustomInputChange}
+            className="custom-input"
+          />
+          <CustomPassword
+            customInput={customInput}
             onPasswordGenerate={setGeneratedPassword}
             triggerGenerate={generateTrigger}
           />
-        );
-      case "balanced":
-        return (
-          <BalancedPassword
-            onPasswordGenerate={setGeneratedPassword}
-            triggerGenerate={generateTrigger}
-          />
-        );
-      case "strong":
-        return (
-          <StrongPassword
-            onPasswordGenerate={setGeneratedPassword}
-            triggerGenerate={generateTrigger}
-          />
-        );
-      case "cipher":
-        return (
-          <div>
-            <input
-              type="text"
-              placeholder="Enter text to cipher"
-              value={customInput}
-              onChange={handleCustomInputChange}
-              className="cipher-input"
-            />
-            <CustomPassword
-              customInput={customInput}
+        </div>
+      );
+    } else {
+      switch (passwordType) {
+        case "simple":
+          return (
+            <SimplePassword
               onPasswordGenerate={setGeneratedPassword}
+              triggerGenerate={generateTrigger}
             />
-          </div>
-        );
-      default:
-        return (
-          <SimplePassword
-            onPasswordGenerate={setGeneratedPassword}
-            triggerGenerate={generateTrigger}
-          />
-        );
+          );
+        case "balanced":
+          return (
+            <BalancedPassword
+              onPasswordGenerate={setGeneratedPassword}
+              triggerGenerate={generateTrigger}
+            />
+          );
+        case "strong":
+          return (
+            <StrongPassword
+              onPasswordGenerate={setGeneratedPassword}
+              triggerGenerate={generateTrigger}
+            />
+          );
+        default:
+          return (
+            <SimplePassword
+              onPasswordGenerate={setGeneratedPassword}
+              triggerGenerate={generateTrigger}
+            />
+          );
+      }
     }
   };
 
@@ -128,7 +131,7 @@ function App() {
             className={`toggle-btn ${mode === "random" ? "random" : "custom"}`}
             onClick={() => {
               setMode(mode === "random" ? "custom" : "random");
-              setPasswordType(mode === "random" ? "cipher" : "simple");
+              setPasswordType(mode === "random" ? "custom" : "simple");
             }}
           >
             <div className="thumb"></div>
@@ -165,16 +168,6 @@ function App() {
                 Strong
               </button>
             </>
-          )}
-          {mode === "custom" && (
-            <button
-              onClick={() => setPasswordType("cipher")}
-              className={`password-button-custom ${
-                passwordType === "cipher" ? "active" : ""
-              }`}
-            >
-              Cipher
-            </button>
           )}
         </div>
 
