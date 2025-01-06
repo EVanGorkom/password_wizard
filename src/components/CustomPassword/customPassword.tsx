@@ -1,16 +1,15 @@
 import { useEffect, useState, useCallback } from "react";
 
 interface CustomPasswordProps {
-    customInput: string;
     onPasswordGenerate: (password: string) => void;
     triggerGenerate: number;
 }
 
 function CustomPassword({
-    customInput,
     onPasswordGenerate,
     triggerGenerate,
 }: CustomPasswordProps) {
+    const [customInput, setCustomInput] = useState("");
     const [includeSymbols, setIncludeSymbols] = useState(false);
     const [includeNumbers, setIncludeNumbers] = useState(false);
     const [applyScramble, setApplyScramble] = useState(false);
@@ -47,47 +46,53 @@ function CustomPassword({
         "9",
     ]);
 
+    const handleCustomInputChange = (
+        event: React.ChangeEvent<HTMLInputElement>
+    ) => {
+        setCustomInput(event.target.value);
+    };
+
     const generatePassword = useCallback(() => {
         let password = customInput;
 
         // Add symbols
         if (includeSymbols) {
-            const randomSymbol =
-                selectedSymbols[Math.floor(Math.random() * selectedSymbols.length)];
-            password += randomSymbol;
+        const randomSymbol =
+            selectedSymbols[Math.floor(Math.random() * selectedSymbols.length)];
+        password += randomSymbol;
         }
 
         // Add numbers
         if (includeNumbers) {
-            const randomNumber =
-                selectedNumbers[Math.floor(Math.random() * selectedNumbers.length)];
-            password += randomNumber;
+        const randomNumber =
+            selectedNumbers[Math.floor(Math.random() * selectedNumbers.length)];
+        password += randomNumber;
         }
 
         // Apply cipher
         if (applyCipher) {
-            const caesarianShift = (input: string, shift: number): string => {
+        const caesarianShift = (input: string, shift: number): string => {
             const letters = "abcdefghijklmnopqrstuvwxyz";
             return input
-                .toLowerCase()
-                .split("")
-                .map((char) => {
+            .toLowerCase()
+            .split("")
+            .map((char) => {
                 if (letters.includes(char)) {
-                    const originalIndex = letters.indexOf(char);
-                    const shiftedIndex = (originalIndex + shift) % letters.length;
-                    return letters[shiftedIndex];
+                const originalIndex = letters.indexOf(char);
+                const shiftedIndex = (originalIndex + shift) % letters.length;
+                return letters[shiftedIndex];
                 }
                 return char;
-                })
-                .join("");
-            };
-            const randomShift = Math.floor(Math.random() * 25) + 1;
-            password = caesarianShift(password, randomShift);
+            })
+            .join("");
+        };
+        const randomShift = Math.floor(Math.random() * 25) + 1;
+        password = caesarianShift(password, randomShift);
         }
 
         // Scramble the password
         if (applyScramble) {
-            password = password
+        password = password
             .split("")
             .sort(() => Math.random() - 0.5)
             .join("");
@@ -95,7 +100,7 @@ function CustomPassword({
 
         // Apply leet speech
         if (applyLeetSpeech) {
-            const leetMap: { [key: string]: string } = {
+        const leetMap: { [key: string]: string } = {
             a: "@",
             e: "3",
             i: "1",
@@ -106,8 +111,8 @@ function CustomPassword({
             p: "9",
             t: "+",
             z: "2",
-            };
-            password = password
+        };
+        password = password
             .split("")
             .map((char) => leetMap[char.toLowerCase()] || char)
             .join("");
@@ -132,12 +137,23 @@ function CustomPassword({
 
     return (
         <div>
-        <p>
-            Customize your password by selecting options below. Start with a base
-            word or phrase, then add features to increase its security.
-        </p>
+        <div className="panel">
+            <h4 className="section-title">Base Input</h4>
+            <p>
+            Start by entering a base word or phrase. This will serve as the
+            foundation for your password.
+            </p>
+            <input
+            type="text"
+            placeholder="Enter base word/phrase"
+            value={customInput}
+            onChange={handleCustomInputChange}
+            />
+        </div>
 
-        <div>
+        <div className="panel">
+            <h4 className="section-title">Customization Options</h4>
+            <p>Select additional features to enhance your password:</p>
             <label>
             <input
                 type="checkbox"
@@ -186,9 +202,7 @@ function CustomPassword({
                 ))}
             </div>
             )}
-        </div>
 
-        <div>
             <label>
             <input
                 type="checkbox"
@@ -222,9 +236,8 @@ function CustomPassword({
                 )}
             </div>
             )}
-        </div>
 
-        <div>
+            <h4>Mixers:</h4>
             <label>
             <input
                 type="checkbox"

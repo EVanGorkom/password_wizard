@@ -14,17 +14,10 @@ function App() {
   const [passwordType, setPasswordType] = useState<
     "simple" | "balanced" | "strong" | "custom"
   >("simple");
-  const [customInput, setCustomInput] = useState("");
   const [generatedPassword, setGeneratedPassword] = useState("");
   const [generateTrigger, setGenerateTrigger] = useState(0);
   const [passwordBank, setPasswordBank] = useState<string[]>([]); 
 
-
-  const handleCustomInputChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setCustomInput(event.target.value);
-  };
 
   const handleCopyToClipboard = () => {
     if (generatedPassword) {
@@ -56,20 +49,10 @@ function App() {
   const renderPasswordComponent = () => {
     if (mode === "custom") {
       return (
-        <div>
-          <input
-            type="text"
-            placeholder="Enter text to customize"
-            value={customInput}
-            onChange={handleCustomInputChange}
-            className="custom-input"
-          />
-          <CustomPassword
-            customInput={customInput}
-            onPasswordGenerate={setGeneratedPassword}
-            triggerGenerate={generateTrigger}
-          />
-        </div>
+        <CustomPassword
+          onPasswordGenerate={setGeneratedPassword}
+          triggerGenerate={generateTrigger}
+        />
       );
     } else {
       switch (passwordType) {
@@ -118,7 +101,7 @@ function App() {
           />
         </div>
 
-        <h1>Password Wizard</h1>
+        {/* <h1>Password Wizard</h1> */}
 
         <div className="intro">
           <Intro />
@@ -145,7 +128,7 @@ function App() {
             <>
               <button
                 onClick={() => setPasswordType("simple")}
-                className={`password-button-rdm ${
+                className={`password-button ${
                   passwordType === "simple" ? "active" : ""
                 }`}
               >
@@ -153,7 +136,7 @@ function App() {
               </button>
               <button
                 onClick={() => setPasswordType("balanced")}
-                className={`password-button-rdm ${
+                className={`password-button ${
                   passwordType === "balanced" ? "active" : ""
                 }`}
               >
@@ -161,7 +144,7 @@ function App() {
               </button>
               <button
                 onClick={() => setPasswordType("strong")}
-                className={`password-button-rdm ${
+                className={`password-button ${
                   passwordType === "strong" ? "active" : ""
                 }`}
               >
@@ -174,20 +157,22 @@ function App() {
         {/* Dynamically Rendered Password Component */}
         <div className="password-output-box">{renderPasswordComponent()}</div>
         <div className="password-row">
-          <button className="generate-button" onClick={handleGeneratePassword}>
+          <button className="btn" onClick={handleGeneratePassword}>
             Generate
           </button>
           <div className="password-display">{generatedPassword}</div>
-          <button className="copy-button" onClick={handleCopyToClipboard}>
+          <button className="btn" onClick={handleCopyToClipboard}>
             <img src={copy_icon} height="17px" />
           </button>
-          <button className="save-button" onClick={handleSavePassword}>
+          <button className="btn" onClick={handleSavePassword}>
             Save
           </button>
         </div>
 
+        {/* Word Bank */}
         {passwordBank.length > 0 && (
           <div className="password-bank">
+            <hr/>
             <h3>Saved Passwords:</h3>
             <textarea
               readOnly

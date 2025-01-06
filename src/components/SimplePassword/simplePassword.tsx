@@ -59,8 +59,8 @@ function SimplePassword({
 
     const addSymbolOrNumber = useCallback(
         (word: string) => {
-        const shouldAddToStart = Math.random() < 0.5; // 50% chance
-        const isNumber = Math.random() < 0.5; // 50% chance for number or symbol
+        const shouldAddToStart = Math.random() < 0.5; 
+        const isNumber = Math.random() < 0.5;
         const char = isNumber ? getRandomNumber() : getRandomSymbol();
 
         return shouldAddToStart ? `${char}${word}` : `${word}${char}`;
@@ -73,7 +73,7 @@ function SimplePassword({
         const word2 = addSymbolOrNumber(randomUpcase(getRandomWord()));
 
         const finalPassword = `${word1}${word2}`;
-        onPasswordGenerate(finalPassword); // Send the password to the parent component
+        onPasswordGenerate(finalPassword);
     }, [addSymbolOrNumber, getRandomWord, randomUpcase, onPasswordGenerate]);
 
     useEffect(() => {
