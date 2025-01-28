@@ -44,6 +44,25 @@
   margin: 2rem 0;
 }
 
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
 .password-button {
   padding: 0.75rem 1.5rem;
   background-color: #510774;
@@ -99,7 +118,7 @@
 }
 
 .toggle-btn.custom .thumb {
-  left: 34px;
+  left: 4px;
 }
 
 .toggle-label {
@@ -247,9 +266,9 @@
   border-radius: 4px;
   position: absolute;
   z-index: 1;
-  bottom: 125%; /* Position above the element */
+  bottom: 125%; 
   left: 50%;
-  margin-left: -100px; /* Center align */
+  margin-left: -100px; 
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -267,7 +286,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   color: #fff;
-  max-width: 800px;
+  width: 800px;
 }
 
 .panel h4 {
