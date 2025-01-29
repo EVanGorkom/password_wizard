@@ -152,9 +152,9 @@ function CustomPassword({
         </div>
 
         <div className="panel">
-            <h4 className="section-title">Customization Options</h4>
-            <p>Select additional features to enhance your password:</p>
-            <label>
+            <h4 className="section-title">Customization Options:</h4>
+            <p>Select additional symbols and numbers to enhance your password:</p>
+            <label className="custom-checkbox">
             <input
                 type="checkbox"
                 checked={includeSymbols}
@@ -163,8 +163,7 @@ function CustomPassword({
             Add Symbols
             </label>
             {includeSymbols && (
-            <div>
-                <h4>Select Symbols:</h4>
+            <div className="symbol-number-container">
                 {[
                 "!",
                 "@",
@@ -183,7 +182,7 @@ function CustomPassword({
                 "/",
                 "?",
                 ].map((symbol) => (
-                <label key={symbol}>
+                <label key={symbol} className={`symbol-number-checkbox ${selectedSymbols.includes(symbol) ? "active" : ""}`}>
                     <input
                     type="checkbox"
                     checked={selectedSymbols.includes(symbol)}
@@ -203,7 +202,7 @@ function CustomPassword({
             </div>
             )}
 
-            <label>
+            <label className="custom-checkbox">
             <input
                 type="checkbox"
                 checked={includeNumbers}
@@ -212,11 +211,10 @@ function CustomPassword({
             Add Numbers
             </label>
             {includeNumbers && (
-            <div>
-                <h4>Select Numbers:</h4>
+            <div className="symbol-number-container">
                 {["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].map(
                 (number) => (
-                    <label key={number}>
+                    <label key={number} className={`symbol-number-checkbox ${selectedNumbers.includes(number) ? "active" : ""}`}>
                     <input
                         type="checkbox"
                         checked={selectedNumbers.includes(number)}
@@ -238,31 +236,34 @@ function CustomPassword({
             )}
 
             <h4>Mixers:</h4>
-            <label>
-            <input
-                type="checkbox"
-                checked={applyScramble}
-                onChange={(e) => setApplyScramble(e.target.checked)}
-            />
-            Scramble
-            </label>
-            <label>
-            <input
-                type="checkbox"
-                checked={applyLeetSpeech}
-                onChange={(e) => setApplyLeetSpeech(e.target.checked)}
-            />
-            Leet Speech
-            </label>
-            <label>
-            <input
-                type="checkbox"
-                checked={applyCipher}
-                onChange={(e) => setApplyCipher(e.target.checked)}
-            />
-            Cipher
-            </label>
-        </div>
+            <p>Select one or more mixers to enhance your base password's security:</p>
+            <div className="mixer-container">
+                <label className={`mixer-option ${applyScramble ? "active" : ""}`}>
+                <input
+                    type="checkbox"
+                    checked={applyScramble}
+                    onChange={(e) => setApplyScramble(e.target.checked)}
+                    />
+                Scramble
+                </label>
+                <label className={`mixer-option ${applyLeetSpeech ? "active" : ""}`}>
+                <input
+                    type="checkbox"
+                    checked={applyLeetSpeech}
+                    onChange={(e) => setApplyLeetSpeech(e.target.checked)}
+                    />
+                Leet Speech
+                </label>
+                <label className={`mixer-option ${applyCipher ? "active" : ""}`}>
+                <input
+                    type="checkbox"
+                    checked={applyCipher}
+                    onChange={(e) => setApplyCipher(e.target.checked)}
+                    />
+                Cipher
+                </label>
+            </div>
+            </div>
         </div>
     );
 }
