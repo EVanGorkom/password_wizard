@@ -160,7 +160,7 @@ function CustomPassword({
                 checked={includeSymbols}
                 onChange={(e) => setIncludeSymbols(e.target.checked)}
             />
-            Add Symbols
+            Exclude Symbols
             </label>
             {includeSymbols && (
             <div className="symbol-number-container">
@@ -208,7 +208,7 @@ function CustomPassword({
                 checked={includeNumbers}
                 onChange={(e) => setIncludeNumbers(e.target.checked)}
             />
-            Add Numbers
+            Exclude Numbers
             </label>
             {includeNumbers && (
             <div className="symbol-number-container">
