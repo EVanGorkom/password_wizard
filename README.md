@@ -58,9 +58,8 @@ password-generator/
 
 ## Future Enhancements
 - Add an option to specify password length and complexity requirements.
-- Implement a graphical user interface (GUI).
-- Support saving generated passwords to a file.
-- For the custom option create an input for selecting which symbols, numbers, and length to use for a word.
+- Add options to adjust the custom password's output. Look into integrating the "Generate" button with randomizing the symbols/numbers/placement within the generated password.
+- "Stenography" password option.
 
 ---
 ---
