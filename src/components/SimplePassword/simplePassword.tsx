@@ -83,11 +83,13 @@ function SimplePassword({
     }, [triggerGenerate, generateSimplePassword]);
 
     return (
-        <div className="simple-password">
-        <p>
-            This password will consist of a combination of words and include at
-            least one symbol, one number, and one uppercase letter.
-        </p>
+        <div className="panel">
+            <div className="simple-password">
+            <p>
+                This password will consist of a combination of words and include at
+                least one symbol, one number, and one uppercase letter.
+            </p>
+            </div>
         </div>
     );
 }

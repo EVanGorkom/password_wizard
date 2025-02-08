@@ -58,11 +58,13 @@ function StrongPassword({
     }, [triggerGenerate]);
 
     return (
-        <div className="strong-password">
-        <p>
-            This password will consist of a random combination of letters, symbols,
-            and numbers with a random assortment of uppercase letters as well.
-        </p>
+        <div className="panel">
+            <div className="strong-password">
+            <p>
+                This password will consist of a random combination of letters, symbols,
+                and numbers with a random assortment of uppercase letters as well.
+            </p>
+            </div>
         </div>
     );
 }

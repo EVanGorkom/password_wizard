@@ -87,11 +87,13 @@ function BalancedPassword({
     }, [triggerGenerate]);
 
     return (
-        <div className="balanced-password">
-        <p>
-            This password will consist of a random combination of words with some
-            letters being substituted for numbers and symbols where appropriate.
-        </p>
+        <div className="panel">
+            <div className="balanced-password">
+            <p>
+                This password will consist of a random combination of words with some
+                letters being substituted for numbers and symbols where appropriate.
+            </p>
+            </div>
         </div>
     );
 }
