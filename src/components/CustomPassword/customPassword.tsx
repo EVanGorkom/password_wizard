@@ -157,7 +157,7 @@ function CustomPassword({
             
             <div className="symbol-number-button">
                 <button 
-                    className={`password-button ${includeSymbols ? "active" : ""}`} 
+                    className={`mixer-option ${includeSymbols ? "active" : ""}`} 
                     onClick={() => setIncludeSymbols(!includeSymbols)}
                     >
                     Adjust Symbol Mix-ins
@@ -187,7 +187,7 @@ function CustomPassword({
                 )}
 
                 <button 
-                    className={`password-button ${includeNumbers ? "active" : ""}`} 
+                    className={`mixer-option ${includeNumbers ? "active" : ""}`} 
                     onClick={() => setIncludeNumbers(!includeNumbers)}
                     >
                     Adjust Number Mix-ins

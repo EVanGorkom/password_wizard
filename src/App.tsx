@@ -187,6 +187,7 @@ function App() {
             </button>
           </div>
         )}
+        <div className="footer"></div>
       </div>
     </div>
   );

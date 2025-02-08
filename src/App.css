@@ -457,8 +457,7 @@ input[type="text"] {
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-bottom: 10px;
-  max-width: 250px;
-  border: 2px solid #af08e6;
+  border: 1px solid ;
 }
 
 .password-button.active {
@@ -467,12 +466,16 @@ input[type="text"] {
 
 .password-button:hover {
   background-color: #810bb8;
+  border: 1px solid;
 }
 
 .mixer-option {
   padding: 10px 14px;
   font-size: 1rem;
   font-weight: 500;
+  width: 250px;
+  max-width: 300px;
+  margin-bottom: 10px;
   color: white;
   border-radius: 6px;
   cursor: pointer;
@@ -491,5 +494,15 @@ input[type="text"] {
 
 .mixer-option:hover {
   background-color: #510774;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
+
+
+
+/* 
+Next I want to adjust the random password options to bloom and adjust the same way the custom password options do.
+
+Then I'll want to look into styling the site with background effects and animations.
+
+Then I'll want to find 3 or 4 several thousand word wordbanks to add to the project. Then let the user select the language they want to use. French, English, Spanish, Italian, Latin.
+*/
