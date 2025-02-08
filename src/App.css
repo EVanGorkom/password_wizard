@@ -397,6 +397,13 @@ input[type="text"] {
 }
 
 /* Custom Checkbox for Symbol and Number Selection */
+.symbol-number-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
 .symbol-number-container {
   display: flex;
   flex-wrap: wrap;
@@ -415,6 +422,7 @@ input[type="text"] {
   background-color: #222;
   color: white;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 15px;
 }
 
 .symbol-number-checkbox input {
@@ -430,12 +438,34 @@ input[type="text"] {
   transform: scale(1.1);
 }
 
-/* Mixer Radio Buttons */
+/* Mixer Buttons */
 .mixer-container {
   display: flex;
   justify-content: center;
   gap: 12px;
   margin-top: 1rem;
+}
+
+.password-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+  max-width: 250px;
+  border: 2px solid #af08e6;
+}
+
+.password-button.active {
+  background-color: #3a0553;
+}
+
+.password-button:hover {
+  background-color: #810bb8;
 }
 
 .mixer-option {

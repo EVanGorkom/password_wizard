@@ -154,88 +154,76 @@ function CustomPassword({
         <div className="panel">
             <h4 className="section-title">Customization Options:</h4>
             <p>Select additional symbols and numbers to enhance your password:</p>
-            <label className="custom-checkbox">
-            <input
-                type="checkbox"
-                checked={includeSymbols}
-                onChange={(e) => setIncludeSymbols(e.target.checked)}
-            />
-            Exclude Symbols
-            </label>
-            {includeSymbols && (
-            <div className="symbol-number-container">
-                {[
-                "!",
-                "@",
-                "#",
-                "$",
-                "%",
-                "^",
-                "&",
-                "*",
-                "-",
-                "_",
-                "+",
-                "=",
-                "|",
-                ":",
-                "/",
-                "?",
-                ].map((symbol) => (
-                <label key={symbol} className={`symbol-number-checkbox ${selectedSymbols.includes(symbol) ? "active" : ""}`}>
-                    <input
-                    type="checkbox"
-                    checked={selectedSymbols.includes(symbol)}
-                    onChange={(e) => {
-                        if (e.target.checked) {
-                        setSelectedSymbols((prev) => [...prev, symbol]);
-                        } else {
-                        setSelectedSymbols((prev) =>
-                            prev.filter((s) => s !== symbol)
-                        );
-                        }
-                    }}
-                    />
-                    {symbol}
-                </label>
-                ))}
-            </div>
-            )}
+            
+            <div className="symbol-number-button">
+                <button 
+                    className={`password-button ${includeSymbols ? "active" : ""}`} 
+                    onClick={() => setIncludeSymbols(!includeSymbols)}
+                    >
+                    Adjust Symbol Mix-ins
+                </button>
 
-            <label className="custom-checkbox">
-            <input
-                type="checkbox"
-                checked={includeNumbers}
-                onChange={(e) => setIncludeNumbers(e.target.checked)}
-            />
-            Exclude Numbers
-            </label>
-            {includeNumbers && (
-            <div className="symbol-number-container">
-                {["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].map(
-                (number) => (
-                    <label key={number} className={`symbol-number-checkbox ${selectedNumbers.includes(number) ? "active" : ""}`}>
-                    <input
-                        type="checkbox"
-                        checked={selectedNumbers.includes(number)}
-                        onChange={(e) => {
-                        if (e.target.checked) {
-                            setSelectedNumbers((prev) => [...prev, number]);
-                        } else {
-                            setSelectedNumbers((prev) =>
-                            prev.filter((n) => n !== number)
-                            );
-                        }
+                {includeSymbols && (
+                    <div className="symbol-number-container">
+                        {["!", "@", "#", "$", "%", "^", "&", "*", "-", "_", "+", "=", "|", ":", "/", "?"].map((symbol) => (
+                            <label key={symbol} className={`symbol-number-checkbox ${selectedSymbols.includes(symbol) ? "active" : ""}`}>
+                            <input
+                            type="checkbox"
+                            checked={selectedSymbols.includes(symbol)}
+                            onChange={(e) => {
+                                if (e.target.checked) {
+                                    setSelectedSymbols((prev) => [...prev, symbol]);
+                                } else {
+                                    setSelectedSymbols((prev) =>
+                                        prev.filter((s) => s !== symbol)
+                                );
+                            }
                         }}
-                    />
-                    {number}
-                    </label>
-                )
+                        />
+                            {symbol}
+                        </label>
+                        ))}
+                    </div>
+                )}
+
+                <button 
+                    className={`password-button ${includeNumbers ? "active" : ""}`} 
+                    onClick={() => setIncludeNumbers(!includeNumbers)}
+                    >
+                    Adjust Number Mix-ins
+                </button>
+            </div>
+
+            <div className="symbol-number-container-parent">
+
+
+                {includeNumbers && (
+                    <div className="symbol-number-container">
+                        {["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].map(
+                            (number) => (
+                                <label key={number} className={`symbol-number-checkbox ${selectedNumbers.includes(number) ? "active" : ""}`}>
+                            <input
+                                type="checkbox"
+                                checked={selectedNumbers.includes(number)}
+                                onChange={(e) => {
+                                    if (e.target.checked) {
+                                        setSelectedNumbers((prev) => [...prev, number]);
+                                    } else {
+                                        setSelectedNumbers((prev) =>
+                                            prev.filter((n) => n !== number)
+                                    );
+                                }
+                            }}
+                            />
+                            {number}
+                            </label>
+                        )
+                    )}
+                    </div>
                 )}
             </div>
-            )}
 
-            <h4>Mixers:</h4>
+            <h4>Word Mixers:</h4>
             <p>Select one or more mixers to enhance your base password's security:</p>
             <div className="mixer-container">
                 <label className={`mixer-option ${applyScramble ? "active" : ""}`}>
