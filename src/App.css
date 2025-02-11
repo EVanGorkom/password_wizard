@@ -458,6 +458,7 @@ input[type="text"] {
   transition: background-color 0.3s ease;
   margin-bottom: 10px;
   border: 1px solid ;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .password-button.active {
@@ -467,6 +468,7 @@ input[type="text"] {
 .password-button:hover {
   background-color: #810bb8;
   border: 1px solid;
+  transform: scale(1.02);
 }
 
 .mixer-option {
@@ -494,7 +496,7 @@ input[type="text"] {
 
 .mixer-option:hover {
   background-color: #510774;
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 
