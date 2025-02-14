@@ -58,7 +58,9 @@ password-generator/
 
 ## Future Enhancements
 - Add an option to specify password length and complexity requirements.
-- Add options to adjust the custom password's output. Look into integrating the "Generate" button with randomizing the symbols/numbers/placement within the generated password.
+- Add screen size styling adjustments.
+- Multiple word banks for different languages.
+- Add animations and background features.
 - "Stenography" password option.
 
 ---
