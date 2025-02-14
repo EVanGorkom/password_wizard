@@ -2,21 +2,13 @@ import { useEffect, useCallback } from "react";
 
 type SimplePasswordProps = {
     onPasswordGenerate: (password: string) => void;
-    triggerGenerate: number; 
+    triggerGenerate: number;
 };
 
-function SimplePassword({
+    function SimplePassword({
     onPasswordGenerate,
     triggerGenerate,
-}: SimplePasswordProps) {
-    const wordBank = [
-        "password",
-        "example",
-        "secure",
-        "random",
-        "simple",
-        "user",
-    ];
+        }: SimplePasswordProps) {
     const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
     const symbols = [
         "!",
@@ -37,10 +29,24 @@ function SimplePassword({
         "?",
     ];
 
-    const getRandomWord = useCallback(() => {
-        const randomIndex = Math.floor(Math.random() * wordBank.length);
-        return wordBank[randomIndex];
-    }, []);
+    async function fetchRandomWord() {
+        try {
+        const response = await fetch("words.txt");
+        if (!response.ok) {
+            throw new Error(`Failed to fetch words.txt: ${response.statusText}`);
+        }
+
+        const text = await response.text();
+        const words = text
+            .split("\n")
+            .map((word) => word.trim())
+            .filter((word) => word.length > 0);
+        return words[Math.floor(Math.random() * words.length)];
+        } catch (error) {
+        console.error("Error loading word bank:", error);
+        return "fallback";
+        }
+    }
 
     const getRandomNumber = useCallback(() => {
         return numbers[Math.floor(Math.random() * numbers.length)];
@@ -59,22 +65,23 @@ function SimplePassword({
 
     const addSymbolOrNumber = useCallback(
         (word: string) => {
-        const shouldAddToStart = Math.random() < 0.5; 
+        const shouldAddToStart = Math.random() < 0.5;
         const isNumber = Math.random() < 0.5;
         const char = isNumber ? getRandomNumber() : getRandomSymbol();
-
         return shouldAddToStart ? `${char}${word}` : `${word}${char}`;
         },
         [getRandomNumber, getRandomSymbol]
     );
 
-    const generateSimplePassword = useCallback(() => {
-        const word1 = addSymbolOrNumber(randomUpcase(getRandomWord()));
-        const word2 = addSymbolOrNumber(randomUpcase(getRandomWord()));
+    const generateSimplePassword = useCallback(async () => {
+        const word1 = randomUpcase(await fetchRandomWord());
+        const word2 = randomUpcase(await fetchRandomWord());
 
-        const finalPassword = `${word1}${word2}`;
+        const finalPassword = `${addSymbolOrNumber(word1)}${addSymbolOrNumber(
+        word2
+        )}`;
         onPasswordGenerate(finalPassword);
-    }, [addSymbolOrNumber, getRandomWord, randomUpcase, onPasswordGenerate]);
+    }, [addSymbolOrNumber, onPasswordGenerate, randomUpcase]);
 
     useEffect(() => {
         if (triggerGenerate) {
@@ -84,12 +91,12 @@ function SimplePassword({
 
     return (
         <div className="panel">
-            <div className="simple-password">
+        <div className="simple-password">
             <p>
-                This password will consist of a combination of words and include at
-                least one symbol, one number, and one uppercase letter.
+            This password will consist of a combination of words and include at
+            least one symbol, one number, and one uppercase letter.
             </p>
-            </div>
+        </div>
         </div>
     );
 }

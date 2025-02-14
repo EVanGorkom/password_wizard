@@ -172,7 +172,7 @@ function App() {
         {/* Word Bank */}
         {passwordBank.length > 0 && (
           <div className="password-bank">
-            <hr/>
+            <hr />
             <h3>Saved Passwords:</h3>
             <textarea
               readOnly
