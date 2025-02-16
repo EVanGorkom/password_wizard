@@ -68,21 +68,31 @@ type SimplePasswordProps = {
 
     const addSymbolOrNumber = useCallback(
         (word: string) => {
-        const shouldAddToStart = Math.random() < 0.5;
-        const isNumber = Math.random() < 0.5;
-        const char = isNumber ? getRandomNumber() : getRandomSymbol();
-        return shouldAddToStart ? `${char}${word}` : `${word}${char}`;
+            const number = getRandomNumber();
+            const symbol = getRandomSymbol();
+
+            const firstChar = Math.random() < 0.5 ? number : symbol;
+            const secondChar = firstChar === number ? symbol : number;
+
+            const shouldAddToStart = Math.random() < 0.5;
+
+            if (shouldAddToStart) {
+                return `${firstChar}${word}${secondChar}`;
+            } else {
+                return `${secondChar}${word}${firstChar}`;
+            }
         },
         [getRandomNumber, getRandomSymbol]
     );
+
 
     const generateSimplePassword = useCallback(async () => {
         const word1 = randomUpcase(await fetchRandomWord());
         const word2 = randomUpcase(await fetchRandomWord());
 
-        const finalPassword = `${addSymbolOrNumber(word1)}${addSymbolOrNumber(
-        word2
-        )}`;
+        const stagingPassword = `${addSymbolOrNumber(word1)}${addSymbolOrNumber(word2)}`;
+        const finalPassword = stagingPassword.slice(1);
+
         onPasswordGenerate(finalPassword);
     }, [addSymbolOrNumber, onPasswordGenerate, randomUpcase]);
 
