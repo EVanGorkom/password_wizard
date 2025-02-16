@@ -390,7 +390,6 @@ espiritual
 negro
 girar
 imagen
-de
 liso
 bienes
 bien
@@ -607,7 +606,6 @@ grueso
 comercio
 extender
 costumbre
-fe
 mecánico
 torneado
 frente

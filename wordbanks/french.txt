@@ -64,7 +64,7 @@ intérêt
 langue
 passage
 entreprise
-à travers
+travers
 manière
 relation
 général
@@ -126,7 +126,7 @@ debout
 croix
 couleur
 nombre
-accident vasculaire cérébral
+touche
 convertir
 radical
 relatif
@@ -214,7 +214,7 @@ base
 passer
 familier
 principe
-un autre
+autre
 que
 prise
 boussole
@@ -234,7 +234,7 @@ augmenter
 but
 nature
 répondre
-vers le bas
+bas
 contre
 bâton
 clair
@@ -245,7 +245,7 @@ chaîne
 coquille
 côté
 automne
-en arrière
+arrière
 déterminer
 plusieurs
 avant
@@ -254,7 +254,7 @@ absolu
 goût
 dessiner
 déchets
-en cours d'exécution
+course
 propagé
 chambre
 cause
@@ -385,7 +385,7 @@ flux
 fournir
 robe
 petit
-en écrivant
+écrivant
 spirituel
 noir
 torsion
@@ -426,7 +426,7 @@ actif
 formation
 précieux
 doux
-à propos
+propos
 opération
 banque
 lourd
@@ -600,7 +600,6 @@ pansement
 puissant
 personnel
 avis
-vers le bas
 droit
 service
 épais
@@ -625,11 +624,11 @@ verticale
 forme
 choix
 plus
-quelque peu
+peu
 chance
 résultat
 résidence
-faire la fête
+fête
 porter
 confiance
 soldat
@@ -763,13 +762,13 @@ livrer
 queue
 baisse
 attention
-se rendre
+rendre
 hydrogène
 Américain
 feuille
 bâtiment
 préparation
-assister à
+assister
 plaine
 tissu
 limite
@@ -796,10 +795,9 @@ rendement
 taper
 beau
 uniforme
-peu importe
+importe
 sérieux
 preuve
-se
 segment
 ancien
 critique
@@ -833,12 +831,11 @@ costume
 patient
 agrégat
 divers
-sud
 projection
 habitude
 tissu
 différend
-se déplacer
+déplacer
 sacrifier
 devenir
 agréable
@@ -853,10 +850,10 @@ arrangement
 impulsion
 sport
 appliquer
-en direct
+direct
 tension
 écrire
-au-dessus de
+au-dessus
 bois
 four
 circuit
@@ -901,13 +898,13 @@ mesuré
 fréquent
 balle
 profit
-en particulier
+particulier
 entier
 admettre
 musculaire
 mince
 singulier
-en rapport
+rapport
 vapeur
 foule
 calme
@@ -954,7 +951,7 @@ laver
 obligation
 coton
 nerf
-en général
+général
 prière
 siècle
 voir
@@ -967,7 +964,6 @@ observation
 milieu
 communauté
 territoire
-os
 histoire
 incolore
 peu profond
@@ -990,7 +986,7 @@ signification
 philosophie
 extrémité
 pesanteur
-en avant
+avant
 diamètre
 près
 gratter
@@ -1025,7 +1021,7 @@ document
 série
 réception
 dire
-qui donne
+donne
 télécommande
 rigide
 sauvage
@@ -1080,7 +1076,7 @@ gagner
 passionnant
 regarder
 sol
-vers l'extérieur
+dehors
 apporter
 compétence
 Ouest
@@ -1096,14 +1092,13 @@ brosse
 cuivre
 diminuer
 trier
-pièce jointe
+jointe
 sensation
-à l'intérieur
+intérieur
 aspect
 tache
 affinité
 glisser
-du sud
 bord
 perception
 conclusion
@@ -1118,7 +1113,7 @@ teinture
 collection
 bec
 rocher
-le mien
+mien
 résistant
 pourriture
 humidité
@@ -1128,7 +1123,7 @@ moyenne
 brûler
 schème
 pâle
-alors que
+alors
 déclaration
 contenir
 pillage
@@ -1142,7 +1137,7 @@ courbe
 intense
 étoile
 perte
-en lisant
+lisant
 spirale
 politique
 agression
@@ -1154,7 +1149,6 @@ contraction
 cerveau
 évolution
 expérience
-plus loin
 complexe
 éponge
 sans valeur
@@ -1178,7 +1172,7 @@ moderne
 horizon
 ville
 naissance
-citron vert
+citron
 appel
 royaume
 constitution
@@ -1214,7 +1208,7 @@ commencer
 prix
 charger
 nécessité
-à venir
+venir
 véhicule
 axe
 balayer
@@ -1315,7 +1309,7 @@ comparaison
 âme
 pauvre
 calendrier
-la mort
+mort
 satisfaire
 artificiel
 déclaration
@@ -1368,7 +1362,6 @@ intrusion
 marchand
 primitif
 défendre
-sexuel
 amorphe
 approprié
 temple
@@ -1455,7 +1448,7 @@ altitude
 enroulement
 contenu
 commettre
-en faillite
+faillite
 prudent
 continu
 conséquence
@@ -1522,7 +1515,7 @@ limité
 assez
 renverser
 fissure
-pièce de monnaie
+monnaie
 adhérent
 observer
 manteau
@@ -1624,7 +1617,7 @@ dommage
 choc
 morbide
 arrondi
-de côté
+côté
 vigoureux
 vérifier
 fenêtre
@@ -1651,7 +1644,7 @@ filet
 grappe
 enceinte
 hiver
-de laine
+laine
 brut
 Allemand
 fermenter
@@ -1779,7 +1772,6 @@ bivalve
 intellectuel
 vice
 sublime
-en bois
 intensité
 alphabet
 élever
@@ -1822,7 +1814,7 @@ agité
 facilité
 polonais
 débat
-se livrer à
+se livrer
 déviation
 arrêter
 trou
@@ -1950,14 +1942,14 @@ vingt
 suffixe
 immeuble
 fibreux
-faire le ménage
+ménage
 silencieux
 association
 sanction
 percer
 errer
 rassemblement
-bande de roulement
+roulement
 nu
 cadeau
 coup d'oeil
@@ -1978,14 +1970,13 @@ trois
 validité
 appartement
 crime
-le long de
 flotte
 triangle
 oiseau
 passage
 sottises
 épée
-mettre en œuvre
+mettre
 brillant
 ignorant
 protestation
@@ -2023,7 +2014,7 @@ curieux
 qualifier
 molécule
 précédent
-vers le haut
+haut
 pente
 rude
 gravier
@@ -2050,7 +2041,7 @@ considération
 préféré
 à tort
 véhément
-en allant
+allant
 rainure
 électrique
 mature
@@ -2135,7 +2126,7 @@ toile
 gris
 haie
 indulgence
-en bonne santé
+salubre
 vidange
 insolent
 physique
@@ -2367,7 +2358,6 @@ ennemi
 adoucir
 obstiné
 progéniture
-s'il te plaît
 émail
 honte
 pratique
@@ -2572,7 +2562,7 @@ déprimé
 régiment
 décoration
 permis
-à l'étranger
+l'étranger
 spécieux
 subtil
 chiffrer
@@ -2582,7 +2572,7 @@ difficile
 sentinelle
 adéquat
 importer
-de rechange
+rechange
 digestion
 orner
 alors
@@ -2611,7 +2601,7 @@ fiançailles
 tumulte
 malveillant
 floraison
-la plupart
+plupart
 ceinture
 convenable
 ardoise
@@ -2619,8 +2609,8 @@ adoption
 talon
 balayage
 hydraté
-en colère
-station balnéaire
+colère
+balnéaire
 localité
 étroitement
 peigne
@@ -2694,7 +2684,6 @@ contraindre
 exempter
 associé
 récupération
-en retard
 plainte
 fusion
 dialecte
@@ -2791,7 +2780,7 @@ cacher
 taureau
 prisonnier
 construire
-ressemblant à
+ressemblant
 pardon
 ville
 crustacée
@@ -2857,7 +2846,7 @@ prime
 joug
 narcotique
 bagatelle
-se dérouler
+dérouler
 leçon
 glucoside
 noyau
@@ -2873,7 +2862,7 @@ habiter
 continuation
 brut
 gracieux
-charbon de bois
+charbon
 Inde
 esclave
 destructeur
@@ -2927,7 +2916,7 @@ cool
 savoir
 exactement
 uni
-le plus éloigné
+éloigné
 tubulaire
 saisir
 infernal
@@ -2941,7 +2930,7 @@ parenté
 apprendre
 heureux
 sensuel
-chemin de fer
+chemin
 efficacité
 uniformité
 reste
@@ -2970,7 +2959,6 @@ rideau
 poétique
 boucle
 infectieux
-nu
 populace
 herbe
 crabe
@@ -2981,7 +2969,6 @@ location
 ajustement
 confession
 énorme
-né
 tableau
 écraser
 stresser
@@ -3000,7 +2987,6 @@ bruyant
 spéculation
 suture
 s'adapter
-ne peut pas
 olive
 fini
 forge
@@ -3044,7 +3030,7 @@ rose
 cornue
 purifier
 bonté
-de derrière
+derrière
 refus
 visible
 amitié
@@ -3052,7 +3038,7 @@ expédition
 largement
 mortel
 objection
-en partie
+partie
 rapace
 parfum
 sauce
@@ -3098,7 +3084,7 @@ astucieux
 diminution
 malade
 unité
-la tête la première
+tête
 prudent
 se tromper
 dériver
@@ -3176,7 +3162,7 @@ définition
 fiel
 carbonate
 incliné
-en gros
+gros
 entacher
 pillage
 lentement
@@ -3208,7 +3194,6 @@ noté
 écliptique
 équitable
 anxieux
-ni l'un ni l'autre
 adieu
 caution
 flûte
@@ -3253,13 +3238,13 @@ voyage
 diminutif
 exploser
 fugitif
-y compris
+compris
 régulièrement
 attaché
 sermon
 instantané
 terrible
-garde à vue
+garde
 cruel
 opprimer
 magique
@@ -3316,7 +3301,7 @@ assisté
 articulation
 défaut
 pauvreté
-plus léger
+léger
 cinq
 coller
 visqueux
@@ -3427,7 +3412,7 @@ partenaire
 acquérir
 décisif
 vallée
-colonne vertébrale
+vertébrale
 sportif
 granulaire
 aléatoire
@@ -3443,13 +3428,12 @@ tortue
 sculpture
 tonte
 reptile
-Bible
-crise d'épilepsie
+crise
 intention
 impulsion
 laine
 souhait
-mollusque univalve
+mollusque
 fouetter
 retenir
 soupçon
@@ -3465,7 +3449,7 @@ indu
 meurtre
 diurne
 hébreu
-à feuilles persistantes
+feuilles
 berger
 impudent
 détaché
@@ -3498,7 +3482,6 @@ compenser
 cerf
 furieux
 accent
-a été
 traiter
 calamité
 résolu
@@ -3510,7 +3493,7 @@ sagace
 classique
 inonder
 hochet
-éruption cutanée
+éruption
 expert
 expressif
 assise
@@ -3521,7 +3504,7 @@ plausible
 studieux
 culasse
 orthographe
-vente au détail
+vente
 petit
 raisonnable
 buffle
@@ -3567,7 +3550,7 @@ propager
 évident
 mandat
 auditif
-à bifurcation
+bifurcation
 obstacle
 museau
 complexe
@@ -3621,10 +3604,9 @@ règne
 déchets
 avant tout
 fondre
-à
 dix-huit
 dents
-à plumes
+plumes
 officiellement
 objectif
 téméraire
@@ -3678,7 +3660,7 @@ pointage
 sélectionner
 tissage
 bol
-en pente
+pente
 exalter
 interrompre
 flétrir
@@ -3692,7 +3674,7 @@ inscrire
 esclavage
 hâtivement
 notation
-arme à feu
+feu
 muet
 oppressif
 péricarpe
@@ -3704,7 +3686,7 @@ pleinement
 gracieux
 dérouter
 dérivé
-chemin de fer
+chemin
 échange
 provenir de
 obstination
@@ -3756,10 +3738,10 @@ approuver
 turc
 tarif
 saturé
-porter atteinte
+porter
 envelopper
 clameur
-faire une conviction
+conviction
 quatorze
 épidémie
 clergé
@@ -3769,7 +3751,6 @@ astucieux
 observance
 acte
 chant
-tabac à priser
 cricket
 géologie
 fou
@@ -3788,13 +3769,13 @@ sénat
 mâle
 nourrir
 déplacer
-se rapporter
+rapporter
 candidat
 dodu
 mou
 artère
 sodium
-en poudre
+poudre
 ascension
 obscurité
 abaissement
@@ -3837,7 +3818,7 @@ frontière
 argumenter
 épaisseur
 marginal
-tout au long de
+partout
 prématuré
 exquis
 voyou
@@ -3846,7 +3827,7 @@ qualités
 absurdité
 vol
 garniture
-se détendre
+détendre
 infuser
 décision
 supplémentaire
@@ -3857,7 +3838,7 @@ réseau
 condenser
 comprimé
 teinte
-en avant
+avant
 étouffer
 saisie
 ammoniac
@@ -3865,7 +3846,7 @@ Jupiter
 pourpoint
 mission
 fission
-de nouveau
+nouveau
 caution
 manche
 autorisé
@@ -3898,7 +3879,7 @@ spiritueux
 habituer
 donc
 intelligence
-en fait
+fait
 cohérent
 destin
 manteau
@@ -3940,17 +3921,17 @@ pétrole
 assister
 trottoir
 observateur
-en morceaux
+morceaux
 qualifié
 occurrence
 nettoyage
 délinquant
 médiat
-qui se produit
+produit
 négligent
 battu
 illustration
-se moquer
+moquer
 orageux
 verbe
 figuré
@@ -3972,7 +3953,7 @@ autorisé
 terrestre
 vantard
 glissement
-en lambeaux
+lambeaux
 meublé
 forgé
 affreux
@@ -4015,7 +3996,7 @@ héroïque
 préface
 magistrat
 inflexion
-contrairement à
+contrairement
 cruauté
 semblant
 mention
@@ -4094,7 +4075,7 @@ révéler
 observation
 dégoût
 délicieux
-à la retraite
+retraite
 cancer
 charnière
 obscène
@@ -4107,7 +4088,7 @@ plénitude
 applaudissements
 chirurgien
 vorace
-papillon de nuit
+papillon
 assez
 sauvegarder
 sculpture
@@ -4125,7 +4106,7 @@ cathartique
 hareng
 opposé
 abdominal
-bateau à vapeur
+vapeur
 taller
 admiration
 culotte
@@ -4134,7 +4115,7 @@ poussée
 fulminer
 propriétaire
 certitude
-se balancer
+balancer
 répondre
 écarlate
 oie
@@ -4299,7 +4280,7 @@ conviction
 réception
 faction
 souple
-être en désaccord
+désaccord
 abrutir
 prévaloir
 élargi
@@ -4314,7 +4295,7 @@ empereur
 extension
 poreux
 conséquent
-à cheval
+cheval
 mousse
 réglé
 célibataire
@@ -4414,7 +4395,7 @@ formatif
 lin
 solaire
 entreprise
-se comporter
+comporter
 urinaire
 assistance
 mais
@@ -4426,7 +4407,6 @@ similitude
 ressentiment
 gazeux
 lion
-bien sûr
 grecque
 textile
 échelonner
@@ -4438,7 +4418,6 @@ velours
 frottis
 englober
 gonflé
-à la mode
 s'immiscer
 privé
 garnir
@@ -4516,7 +4495,7 @@ ventricule
 gréement
 déterminé
 voyage
-décision de justice
+justice
 entraîné
 tapis
 blesser
@@ -4536,7 +4515,6 @@ cisailles
 porcelaine
 benzène
 franchise
-bien que
 fraction
 parfumé
 substitution
@@ -4591,7 +4569,7 @@ jury
 hydroxyle
 variétés
 chirurgie
-Chambre des communes
+Chambre
 sur
 inventer
 responsable
@@ -4676,7 +4654,7 @@ suspect
 trahir
 fantoche
 jouant
-en privé
+privé
 célèbre
 affirmer
 ciseau
@@ -4741,7 +4719,7 @@ est tombé
 diligent
 burlesque
 vacance
-se précipiter
+précipiter
 misère
 luxueux
 Hollande
@@ -4764,10 +4742,9 @@ densité
 bouquet
 renverser
 réveil
-autoroute à péage
+autoroute
 opératoire
 finition
-colonne vertébrale
 démonter
 coiffure
 voile
@@ -4776,7 +4753,7 @@ malheureux
 grossièrement
 perplexité
 ellipse
-discours solennel
+discours
 affluent
 informel
 herbacé
@@ -4832,7 +4809,7 @@ dissimulation
 perpétuel
 aéré
 tribune
-en train de mourir
+mourant
 accuser
 parler
 hériter
@@ -4850,7 +4827,6 @@ caille
 révélation
 grandeur
 responsable
-en plus
 veuve
 modifier
 falsifier
@@ -4910,7 +4886,7 @@ congelé
 lancement
 carrière
 éclat
-poudre à canon
+canon
 moulage
 augmenter
 arpentage
@@ -4956,10 +4932,9 @@ cercueil
 tromperie
 flétri
 polaire
-tout à fait
 stagnant
 phosphore
-se fondre
+fondre
 consacrer
 enjamber
 soumis
@@ -4967,7 +4942,7 @@ briser
 ulcère
 jeter
 honteux
-tous les jours
+jours
 débrayer
 règle
 porteur
@@ -4995,6 +4970,6 @@ courtois
 taille
 troupeau
 aspirer
-avoir l'intention
+avoir
 puissant
 améliorer
