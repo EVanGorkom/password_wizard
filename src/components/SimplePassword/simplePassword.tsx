@@ -31,9 +31,9 @@ type SimplePasswordProps = {
 
     async function fetchRandomWord() {
         try {
-        const response = await fetch("words.txt");
+            const response = await fetch("wordbanks/words.txt");
         if (!response.ok) {
-            throw new Error(`Failed to fetch words.txt: ${response.statusText}`);
+            throw new Error(`Failed to fetch words`);
         }
 
         const text = await response.text();
@@ -57,8 +57,11 @@ type SimplePasswordProps = {
     }, []);
 
     const randomUpcase = useCallback((word: string) => {
+        if (word.length === 0 ) return word;
+
         const chars = word.split("");
-        const randomIndex = Math.floor(Math.random() * chars.length);
+        const randomIndex = Math.random() < 0.5 ? 0 : chars.length - 1;
+        
         chars[randomIndex] = chars[randomIndex].toUpperCase();
         return chars.join("");
     }, []);
