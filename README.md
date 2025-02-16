@@ -56,10 +56,14 @@ password-generator/
 └── README.md               # Documentation
 ```
 
-## Future Enhancements
+## Future Core Enhancements
 - Add an option to specify password length and complexity requirements.
+- Adjust the customization options so that deselected numbers and symbols can't be used for the "Leet Speech" mixer option.
+- Add tool tips for the "Adjust Mix-ins" section so the user clearly understands how to use the tool.
+- Utilize the multiple word banks.
+
+### Future Quality of Life Enhancements 
 - Add screen size styling adjustments.
-- Multiple word banks for different languages.
 - Add animations and background features.
 - "Stenography" password option.
 
