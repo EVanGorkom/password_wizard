@@ -64,7 +64,7 @@ interés
 idioma
 paso
 negocio
-a través de
+través
 manera
 relación
 general
@@ -114,15 +114,13 @@ material
 escala
 autoridad
 capaz
-cualquier cosa
 regular
 existencias
 romper
 opuesto
-en
 angustia
 trabajar
-de pie
+pie
 cruz
 color
 número
@@ -425,7 +423,7 @@ activo
 formación
 valioso
 suave
-acerca de
+acerca
 operación
 banco
 pesado
@@ -445,7 +443,7 @@ longitud
 mercado
 armonía
 preparar
-llevar a cabo
+llevar
 tierra
 junta
 eje
@@ -464,7 +462,6 @@ género
 unión
 púrpura
 marido
-ala
 roto
 extranjero
 divino
@@ -479,7 +476,7 @@ aún
 rueda
 largo
 carga
-mano de obra
+obra
 nota
 intervalo
 columna
@@ -512,7 +509,7 @@ metal
 textura
 doctrina
 corte
-más bajo
+bajo
 papel
 vista
 hueco
@@ -579,7 +576,6 @@ mercurio
 alcohol
 haciendo
 garganta
-pie
 refugio
 elástico
 leve
@@ -599,7 +595,7 @@ vendaje
 poderoso
 personal
 aviso
-hacia abajo
+abajo
 vertical
 favor
 grueso
@@ -623,12 +619,12 @@ vertical
 forma
 elección
 más
-un poco
+poco
 oportunidad
 resultado
 residencia
 fiesta
-tener puesto
+puesto
 confianza
 soldado
 continuar
@@ -725,7 +721,7 @@ valioso
 completo
 fácilmente
 acero
-de colores
+colores
 ocultar
 variable
 discurso
@@ -784,7 +780,6 @@ obispo
 nombre
 recolectar
 dificultar
-más allá de
 comienzo
 caso
 pacto
@@ -797,7 +792,7 @@ uniforme
 lo que
 serio
 prueba
-sí mismo
+mismo
 segmento
 anterior
 crítico
@@ -813,7 +808,7 @@ femenino
 universal
 piso
 fuego
-FALSO
+falso
 depresión
 sello
 clase
@@ -844,7 +839,7 @@ crédito
 parcial
 cadena
 amplio
-del norte
+dnorte
 celestial
 tubo
 acuerdo
@@ -1101,7 +1096,7 @@ aspecto
 mancha
 afinidad
 deslizar
-del sur
+dsur
 borde
 percepción
 conclusión
@@ -1152,7 +1147,6 @@ contracción
 cerebro
 evolución
 experiencia
-más
 complejo
 esponja
 sin valor
@@ -1161,7 +1155,7 @@ medida
 excepto
 pago
 elección
-a veces
+veces
 visión
 pantalla
 aprovechar
@@ -1274,7 +1268,7 @@ negociar
 Copiar
 hundir
 parcialmente
-de lo contrario
+contrario
 superar
 acechar
 sentir
@@ -1348,7 +1342,7 @@ versículo
 justo
 ausencia
 terciario
-de acuerdo a
+acuerdo
 banquete
 transporte
 departamento
@@ -1491,7 +1485,7 @@ mental
 abertura
 presentar
 jalar
-libra esterlina
+libra
 venir
 insertado
 contacto
@@ -1506,7 +1500,7 @@ nariz
 pecho
 vulgar
 correa
-sin sentido
+sentido
 latín
 tarjeta
 análisis
@@ -1554,7 +1548,7 @@ obstruir
 atmósfera
 manto
 recordar
-de nuevo
+nuevo
 receptor
 consonante
 blanco
@@ -1649,7 +1643,7 @@ filete
 grupo
 embarazada
 invierno
-de lana
+lana
 bruto
 alemán
 fermentar
@@ -1670,11 +1664,10 @@ ruina
 excéntrico
 ocupar
 cristalino
-al otro lado de
 comunión
 apéndice
 ventral
-oponerse a
+oponerse
 memorial
 cuna
 ligeramente
@@ -1751,7 +1744,7 @@ perenne
 costa
 viaje
 fundición
-tener éxito
+éxito
 mejorar
 análogo
 venenoso
@@ -1777,7 +1770,7 @@ bivalvo
 intelectual
 vicio
 sublime
-de madera
+madera
 intensidad
 alfabeto
 elevar
@@ -1863,7 +1856,7 @@ exclusivo
 patio
 postrado
 horizontal
-de despedida
+despedida
 abuso
 ciudadano
 receptáculo
@@ -1892,7 +1885,6 @@ perdurar
 meridiano
 inflado
 premio
-uso
 pensar
 pesca
 escena
@@ -1922,7 +1914,6 @@ año
 distinguir
 entretener
 jardín
-su
 inmersión
 adhesión
 pureza
@@ -1966,7 +1957,6 @@ partida
 emoción
 estimación
 calificación
-ola
 cóncavo
 inmediato
 realeza
@@ -1976,7 +1966,6 @@ tres
 validez
 departamento
 delito
-a lo largo de
 flota
 triángulo
 pájaro
@@ -2023,7 +2012,6 @@ molécula
 anterior
 hacia arriba
 pendiente
-duro
 grava
 totalmente
 valencia
@@ -2090,9 +2078,7 @@ décimo
 almacenar
 techo
 información
-que
 retirarse
-oro
 sifón
 separación
 cuña
@@ -2123,7 +2109,7 @@ encanto
 magnético
 herencia
 ladrillo
-en público
+público
 levemente
 molestar
 corrupción
@@ -2160,7 +2146,7 @@ agitar
 exhaustivo
 conectar
 secreción
-poder pagar
+pagar
 articular
 celúla
 deficiente
@@ -2180,14 +2166,13 @@ calumnia
 partidista
 trampa
 acuático
-agua fresca
+agua-fresca
 capucha
 desdén
 remoto
 aventura
 resumen
 contar
-si
 literal
 pastar
 cloruro
@@ -2256,7 +2241,7 @@ mayor
 perteneciente
 difuso
 carbón
-pasar por alto
+alto
 florecer
 obtenido
 almohadón
@@ -2354,13 +2339,13 @@ conocimiento
 familiar
 tocón
 cemento
-hacer cumplir
+cumplir
 medicinal
 adverso
 oriental
 avergonzar
 club
-en cambio
+cambio
 enemigo
 ablandar
 obstinado
@@ -2570,7 +2555,7 @@ deprimido
 regimiento
 decoración
 permiso
-en el extranjero
+extranjero
 especioso
 sutil
 cifrar
@@ -2598,7 +2583,7 @@ válvula
 hosco
 gastar
 conformidad
-sin vida
+vida
 enjuiciar
 parche
 panel
@@ -2712,11 +2697,11 @@ proverbio
 metamérico
 ansiedad
 escisión
-tubo de lámpara
+tubo lámpara
 risa
 excesivo
 métrico
-contracción nerviosa
+nerviosa
 mejora
 arrogante
 viajero
@@ -2757,7 +2742,6 @@ ajustarse
 homenaje
 contención
 conducir
-ellos
 descubrir
 robar
 honesto
@@ -2766,7 +2750,6 @@ nido
 armonizar
 desactivar
 arrastrarse
-de este modo
 mortero
 silla
 extremadamente
@@ -2789,7 +2772,7 @@ ocultar
 toro
 prisionero
 construir
-parecido a
+parecido
 indulto
 ciudad
 crustácea
@@ -2851,7 +2834,7 @@ cinta
 impartir
 correo
 rápido
-de primera calidad
+calidad
 yugo
 narcótico
 bagatela
@@ -2919,13 +2902,13 @@ rectitud
 discordia
 deformidad
 consistir
-lo aburrido
+aburrido
 feliz
 Frío
 saber
 exactamente
 unido
-más lejano
+lejano
 tubular
 comprender
 infernal
@@ -2949,7 +2932,6 @@ casco
 opérculo
 conciencia
 incisión
-cerveza negra
 dedicar
 naturalmente
 dragón
@@ -2985,12 +2967,12 @@ aplastar
 estrés
 volcánico
 humanidad
-dejar perplejo
+perplejo
 compensación
 demandante
 hervir
 ganancia
-a menudo
+menudo
 vagón
 susceptible
 Sanskrit
@@ -2998,7 +2980,6 @@ ruidoso
 especulación
 sutura
 idear
-no poder
 aceituna
 finalizado
 fragua
@@ -3050,7 +3031,7 @@ expedición
 ampliamente
 mortal
 objeción
-en parte
+parte
 rapaz
 perfume
 salsa
@@ -3096,7 +3077,7 @@ eminente
 disminución
 enfermo
 unidad
-de cabeza
+cabeza
 precavido
 equivocado
 derivar
@@ -3120,7 +3101,7 @@ tumor
 mezclar
 turbulento
 predicado
-sin embargo
+embargo
 representación
 vigilante
 intención
@@ -3140,7 +3121,7 @@ tonto
 otorgar
 ajustado
 bazo
-frente a
+frente
 retrato
 quilla
 procedimiento
@@ -3174,7 +3155,7 @@ definición
 hiel
 carbonato
 envuelto
-a granel
+granel
 mancha
 pillaje
 despacio
@@ -3206,7 +3187,6 @@ anotado
 eclíptica
 equitativo
 ansioso
-ni
 despedida
 fianza
 flauta
@@ -3312,7 +3292,7 @@ orador
 puñetazo
 atendido
 articulación
-por defecto
+defecto
 pobreza
 encendedor
 cinco
@@ -3350,7 +3330,6 @@ adjetivamente
 cariño
 indias
 ardilla
-mes
 grúa
 bosquejo
 controversia
@@ -3385,7 +3364,7 @@ servicio
 equidad
 Sagrada Escritura
 violeta
-que contiene
+contiene
 escuchar
 parada
 constante
@@ -3463,7 +3442,7 @@ indebido
 asesinato
 diurno
 hebreo
-hojas perennes
+perennes
 pastor
 impudente
 separado
@@ -3502,7 +3481,6 @@ calamidad
 resuelto
 productor
 contingente
-tez
 soplo
 sagaz
 clásico
@@ -3511,7 +3489,6 @@ traqueteo
 erupción
 experto
 expresivo
-pie
 cono
 austero
 competente
@@ -3535,7 +3512,7 @@ progresivo
 globo
 crear
 furia
-rogar a
+rogar
 inserción
 ofender
 recorrer
@@ -3619,7 +3596,6 @@ elevado
 basura
 principal
 derretir
-a
 dieciocho
 dientes
 plumado
@@ -3655,7 +3631,6 @@ muesca
 santuario
 amenazar
 centro
-sed
 carmesí
 aislado
 destino
@@ -3676,7 +3651,7 @@ cuenta
 seleccionar
 tejeduría
 bol
-en pendiente
+pendiente
 exaltar
 interrumpir
 marchitar
@@ -3690,7 +3665,7 @@ inscribir
 esclavitud
 precipitadamente
 notación
-arma de fuego
+arma fuego
 silenciar
 opresivo
 pericarpio
@@ -3792,7 +3767,7 @@ rechoncho
 flojo
 artería
 sodio
-en polvo
+polvo
 ascenso
 oscuridad
 encapotado
@@ -3815,7 +3790,7 @@ conferencia
 pagado
 inquietud
 instinto
-indigno de
+indigno
 rival
 antieconómico
 preliminar
@@ -3835,7 +3810,6 @@ frontera
 argumentar
 espesor
 marginal
-a lo largo de
 prematuro
 exquisito
 pícaro
@@ -3863,7 +3837,7 @@ Júpiter
 doblete
 misión
 fisión
-de nuevo
+nuevo
 causa
 manga
 autorizado
@@ -3874,7 +3848,7 @@ afrenta
 ofensa
 apreciar
 restringir
-en ciernes
+ciernes
 confederado
 cortar
 emboscada
@@ -3888,7 +3862,7 @@ prado
 noroeste
 esponjoso
 hojas
-en otra parte
+otra parte
 policía
 placenta
 componente
@@ -3896,7 +3870,7 @@ espirituoso
 acostumbrar
 por lo tanto
 inteligencia
-de hecho
+hecho
 coherente
 destino
 capa
@@ -3907,7 +3881,6 @@ escrito
 quinto
 orina
 prisa
-ya
 bufanda
 durable
 grave
@@ -3933,18 +3906,17 @@ fortalecer
 sesión
 vértebra
 envío
-Smo
 petróleo
 asistir
 frenar
 observador
-en pedazos
+pedazos
 calificado
 aparición
 limpieza
 delincuente
 mediar
-que ocurre
+ocurre
 negligente
 vencido
 ilustración
@@ -3953,7 +3925,7 @@ tempestuoso
 verbo
 figurado
 montaje
-el secado
+secado
 murmullo
 desviarse
 cocina
@@ -3966,7 +3938,7 @@ muelle
 monopolio
 periódico
 retardar
-con licencia
+licencia
 terrestre
 jactancioso
 corredizo
@@ -3974,9 +3946,9 @@ harapiento
 amueblado
 forjado
 espantoso
-De dónde
+dónde
 estrato
-diferir de
+diferir
 satisfacer
 conjetura
 propiedad
@@ -4013,7 +3985,7 @@ heroico
 prefacio
 magistrado
 inflexión
-a diferencia de
+diferencia
 crueldad
 apariencia
 mencionar
@@ -4084,7 +4056,7 @@ ingeniero
 aldehído
 titmouse
 transportado
-de cuerda
+cuerda
 arrogancia
 estudió
 manejable
@@ -4123,8 +4095,7 @@ catártico
 arenque
 opuesto
 abdominal
-buque de vapor
-caña del timón
+vapor
 admiración
 pantalones
 obediente
@@ -4154,7 +4125,7 @@ calcáreo
 tumultuoso
 ejecutante
 dispensar
-en silencio
+silencio
 discreción
 probóscide
 helada
@@ -4181,7 +4152,6 @@ persa
 recientemente
 inestable
 desigualdad
-ver
 realmente
 maduro
 responder
@@ -4210,7 +4180,7 @@ ingrediente
 defecto
 secretar
 técnico
-tejido de punto
+tejido
 diosa
 pantalones
 punción
@@ -4251,11 +4221,11 @@ bullicioso
 reprensión
 divagar
 alentar
-dos veces
+dos-veces
 tordo
 triangular
 tenia
-aptitud física
+física
 alojamiento
 fijado
 conferir
@@ -4285,7 +4255,7 @@ colocar
 aro
 impreso
 compatible
-sin ánimo
+ánimo
 sondear
 banco
 pabellón
@@ -4298,7 +4268,7 @@ recepción
 facción
 ágil
 discrepar
-dejar estupefacto
+estupefacto
 prevalecer
 engrandecido
 jaula
@@ -4312,7 +4282,7 @@ emperador
 extensión
 poroso
 consiguiente
-lado de caballo
+caballo
 espuma
 establecido
 bachiller
@@ -4345,12 +4315,11 @@ vidrioso
 rastreo
 electo
 acusación
-pez
 envidiar
 hambre
 educado
 maderas
-con libertad
+libertad
 brillante
 descrédito
 profesar
@@ -4372,7 +4341,6 @@ frugalidad
 venganza
 parque
 implícito
-en
 corona
 diferencial
 fusión
@@ -4436,7 +4404,7 @@ terciopelo
 frotis
 abarcar
 hinchado
-de moda
+moda
 entrometerse
 privado
 guarnación
@@ -4457,7 +4425,7 @@ distraer
 equipo
 ensayar
 dictar
-aborto provocado
+provocado
 seminario
 saltar
 gerente
@@ -4504,7 +4472,7 @@ cáscara
 ubicación
 inhumano
 penacho
-el menos
+menos
 sustancial
 sostenido
 frustrar
@@ -4534,12 +4502,12 @@ tijeras
 porcelana
 benceno
 franquicia
-a pesar de
+pesar
 fracción
 sazonado
 sustitución
 distintivamente
-dar derecho
+derecho
 tránsito
 desde
 nueve
@@ -4589,8 +4557,7 @@ jurado
 hidroxilo
 variedades
 cirugía
-los comunes
-al
+comunes
 inventar
 responsable
 recompensar
@@ -4632,8 +4599,8 @@ estirado
 suave
 daga
 indicación
-conservar en vinagre
-máquina de alquiler
+vinagre
+alquiler
 abundante
 recaída
 excusado
@@ -4674,7 +4641,7 @@ sospechoso
 traicionar
 marioneta
 jugando
-en privado
+privado
 famoso
 afirmar
 cincel
@@ -4717,7 +4684,7 @@ audible
 reversión
 llaga gangrenosa
 tiburón
-respecto a
+respecto
 topógrafo
 pistilo
 prematuro
@@ -4959,13 +4926,13 @@ estancado
 fósforo
 juntarse
 consagrar
-montar a horcajadas
+horcajadas
 sumiso
 romper
 úlcera
 sacudida
 vergonzoso
-a diario
+diario
 desacoplar
 gobernante
 portador
@@ -4996,3 +4963,4 @@ aspirar
 pretender
 potente
 mejorar
+limon

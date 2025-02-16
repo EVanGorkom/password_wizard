@@ -119,7 +119,6 @@ rectus
 stirpes
 confringo
 oppositus
-in
 angustia
 opus
 stans
@@ -131,7 +130,6 @@ conversus
 radicitus
 relativus
 munus
-sto
 proripio
 quaestio
 peculiar
@@ -215,7 +213,6 @@ transeo
 nota
 principium
 alium
-qui
 teneo
 circumscribo
 pice
@@ -226,7 +223,6 @@ redigo
 levitas
 miror
 tempus
-imo
 faciem
 flos
 extremus
@@ -234,7 +230,6 @@ attollo
 propositum
 natura
 exaudio
-in
 contra
 baculo
 liquido
@@ -367,7 +362,6 @@ foris
 melior
 ecclesiacus
 mixtura
-cum
 par
 obnoxium
 far
@@ -375,7 +369,6 @@ volatile
 equivalent
 gracilis
 removeo
-ens
 conservo
 gratia
 tellus
@@ -390,13 +383,11 @@ spiritualis
 niger
 torqueo
 pictura
-ex
 lenio
 fundum
 denique
 anchor
 junctura
-cor
 expressio
 procreo
 centrum
@@ -426,7 +417,6 @@ activus
 formatio
 valuatus
 mollis
-de
 operatio
 bank
 gravis
@@ -457,7 +447,6 @@ conamen
 durus
 judico
 propriis
-os
 moralis
 regio
 interior
@@ -515,12 +504,10 @@ DOCTRINA
 cuttivus
 inferior
 charta
-vis
 cavum
 sequor
 iudicialis
 formalis
-sal
 ictus
 membrum
 conservus
@@ -554,7 +541,6 @@ planus
 publicus
 conpositio
 CIRCUMSPECTIO
-res
 constituo
 necessarius
 lenis
@@ -580,7 +566,6 @@ mercurius
 alcohol
 factio
 fauces
-pes
 tectumque
 Elasticus
 levis
@@ -627,9 +612,7 @@ optio
 more
 aliquanto
 casus
-res
 residentiae
-pars
 gurgio
 fiducia
 miles
@@ -823,7 +806,6 @@ simulatus
 stamp
 soporo
 perdisco
-post
 simulo
 olim
 par
