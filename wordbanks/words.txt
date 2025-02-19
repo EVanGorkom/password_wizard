@@ -76,7 +76,6 @@ property
 advance
 account
 original
-religion
 round
 over
 principal
@@ -955,7 +954,6 @@ obligation
 cotton
 nerve
 generally
-prayer
 century
 view
 servant
@@ -2213,7 +2211,6 @@ edible
 beast
 palm
 dimension
-gospel
 fluid
 island
 deal
@@ -3440,7 +3437,6 @@ dealing
 brighten
 dense
 tortoise
-sculpture
 shearing
 reptile
 seizure
