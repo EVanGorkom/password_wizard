@@ -31,7 +31,7 @@ type SimplePasswordProps = {
 
     async function fetchRandomWord() {
         try {
-            const response = await fetch("/wordbanks/words.txt");
+            const response = await fetch("public/wordbanks/words.txt");
         if (!response.ok) {
             throw new Error(`Failed to fetch words`);
         }
