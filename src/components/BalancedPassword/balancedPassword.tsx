@@ -11,7 +11,7 @@ function BalancedPassword({
 }: BalancedPasswordProps) {
     async function getRandomWord(): Promise<string> {
         try {
-            const response = await fetch("public/wordbanks/words.txt");
+            const response = await fetch(`${import.meta.env.BASE_URL}/wordbanks/words.txt`);
         if (!response.ok) {
             throw new Error(`Failed to fetch words`);
         }
