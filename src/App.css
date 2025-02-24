@@ -209,15 +209,22 @@ button:focus-visible {
 }
 
 .password-display {
-  padding: 0.75rem;
+  padding: 0.75rem 1.5rem;
   background-color: #060665;
   color: aliceblue;
   border: 2px solid aliceblue;
   border-radius: 8px;
-  font-size: 1.25rem;
+  font-size: 1.20rem;
+  font-weight: 900;
   width: 20rem;
+  height: 2rem;
   text-align: center;
-  overflow-wrap: break-word;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .password-bank {
@@ -327,18 +334,6 @@ input[type="text"] {
 
 .submit-btn:hover {
   background: linear-gradient(90deg, #7e1cfb, #3685fc);
-}
-
-/* Password Output */
-.password-display {
-  margin: 1rem 0;
-  padding: 1rem;
-  background: #060665;
-  border: 2px solid #fff;
-  border-radius: 8px;
-  color: #fff;
-  font-size: 1rem;
-  word-wrap: break-word;
 }
 
 .intro {
@@ -451,12 +446,9 @@ input[type="text"] {
   padding: 0.75rem 1.5rem;
   background-color: #222;
   color: white;
-  border: none;
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-bottom: 10px;
   border: 1px solid ;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }

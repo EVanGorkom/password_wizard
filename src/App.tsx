@@ -157,14 +157,14 @@ function App() {
         {/* Dynamically Rendered Password Component */}
         <div className="password-output-box">{renderPasswordComponent()}</div>
         <div className="password-row">
-          <button className="btn" onClick={handleGeneratePassword}>
+          <button className="password-button" onClick={handleGeneratePassword}>
             Generate
           </button>
           <div className="password-display">{generatedPassword}</div>
-          <button className="btn" onClick={handleCopyToClipboard}>
+          <button className="password-button" onClick={handleCopyToClipboard}>
             <img src={copy_icon} height="17px" />
           </button>
-          <button className="btn" onClick={handleSavePassword}>
+          <button className="password-button" onClick={handleSavePassword}>
             Save
           </button>
         </div>
